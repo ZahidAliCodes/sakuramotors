@@ -176,6 +176,7 @@ input {
 }
 .vs-dropdown i {
     transition: transform 0.3s ease;
+    color: var(--text-color);
 }
 .vs-dropdown-menu {
     position: absolute;
