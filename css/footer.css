@@ -1,0 +1,112 @@
+.footer {
+    background-color: #121212;
+    padding: 64px 0;
+}
+.footer-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--text-color);
+}
+.about-us {
+    width: 30%;
+}
+.about-us-contact {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0 0 24px 0;
+}
+.footer-right .footer-section {
+    width: 34%;
+}
+.footer-right {
+    width: 56%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-section h3 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--white);
+    margin: 0 0 24px 0;
+}
+.about-us p {
+    opacity: 80%;
+    margin: 0 !important;
+}
+.footer-section p,
+.footer-section ul li {
+    margin-bottom: 16px;
+}
+.footer-section a {
+    padding: 0 0 4px 0;
+    transition: 0.5s;
+}
+.footer-section p,
+.footer-section ul li a {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    transition: color 0.3s ease;
+    color: var(--white);
+}
+
+.footer-right a:hover {
+    border-bottom: 1px solid var(--white);
+}
+.about-us .footer-logo img {
+    height: 80px;
+}
+.about-us .contact-info-footer {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--primary-color);
+}
+.about-us .contact-info-footer i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+.copyright {
+    max-width: 1250px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px 0 0 0;
+    position: relative;
+}
+.copyright p {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    transition: color 0.3s ease;
+    color: var(--white);
+    opacity: 80%;
+}
+.active-ft {
+    font-weight: 700 !important;
+    border-bottom: 1px solid var(--white);
+}
+.back-to-top {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    display: flex;
+    padding: 14px 18px;
+    border: 1px solid var(--white);
+    border-radius: var(--border-radius);
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--white);
+    transition: color 0.3s ease;
+}
