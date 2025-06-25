@@ -111,7 +111,7 @@ const vehicleTypes = [
   { type: "Suv", count: 2, image: "assets/suv.svg", url: "suv.html" },
   { type: "Sedan", count: 2, image: "assets/sedan.svg", url: "sedan.html" },
   { type: "Wagon", count: 2, image: "assets/wagon.svg", url: "wagon.html" },
-  { type: "Hatchback", count: 2, image: "assets/Hatchback.svg", url: "hatchback.html" },
+  { type: "Hatchback", count: 2, image: "assets/hatchback.svg", url: "hatchback.html" },
   { type: "Pick Up", count: 2, image: "assets/pick-up.svg", url: "pick-up.html" },
   { type: "Machinery", count: 2, image: "assets/machinery.svg", url: "machinery.html" },
   { type: "Large bus", count: 2, image: "assets/mini-bus.svg", url: "large-bus-alt.html" }
