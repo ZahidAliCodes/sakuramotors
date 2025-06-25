@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sakura Motors</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <!-- link offline font fontawesome pro -->
+        <link rel="stylesheet" href="icon/css/all.min.css" />
+        <link rel="stylesheet" href="icon/css/sharp-solid.min.css" />
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="header-container">
+                    <div class="logo">
+                        <img src="assets/logo.svg" alt="Sakura Motors" />
+                    </div>
+                    <div class="nav-main">
+                        <div class="desktop-contact">
+                            <a href="https://wa.me/81298683668" target="_blank">
+                                <i class="fa-regular c-t-a fa-phone"></i>
+                                <span>+81-29-868-3668</span>
+                            </a>
+                        </div>
+                        <nav class="nav-links">
+                            <ul>
+                                <li><a href="#" class="active">Home</a></li>
+                                <li><a href="#">Stock</a></li>
+                                <li class="dropdown">
+                                    <a href="#">About Us <i class="fas fa-chevron-down"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">About Company</a></li>
+                                        <li><a href="#">Gallery</a></li>
+                                        <li><a href="#">Payment</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li class="dropdown">
+                                    <a href="#">Whatsapp <i class="fas fa-chevron-down"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="https://wa.me/818068823553" target="_blank">Japan: +81-80-6882-3553</a></li>
+                                        <li><a href="https://wa.me/255716787502" target="_blank">Tanzania: +255-716-787-502</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="auth-buttons auth-buttons-desk">
+                        <button class="login">Log in</button>
+                        <button class="signup">Sign up</button>
+                    </div>
+                    <div class="support-main">
+                        <div class="support-btn">
+                            <i class="fa-regular fa-phone"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="hamburger" onclick="toggleMenu()">
+                            <i class="fa-regular fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="top-row">
+                    <div class="logo">
+                        <img src="assets/logo.svg" alt="Sakura Motors" />
+                    </div>
+                    <div class="support-main">
+                        <div class="support-btn">
+                            <i class="fa-regular fa-phone"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="icons">
+                            <i class="fa-regular fa-xmark-large" onclick="toggleMenu()"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="mbl-bottom">
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">Stock</a></li>
+                        <li><a href="#">Company Profile</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Payment</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                    <div class="cont-info">
+                        <h1><i class="fa-brands fa-whatsapp"></i> Whatsapp:</h1>
+                        <p>
+                            Japan: <a href="https://wa.me/818068823553" target="_blank"><strong>+81-80-6882-3553</strong></a>
+                        </p>
+                        <p>
+                            Tanzania: <a href="https://wa.me/255716787502" target="_blank"><strong>+255-716-787-502</strong></a>
+                        </p>
+                    </div>
+
+                    <div class="auth-buttons">
+                        <button class="login">Log in</button>
+                        <button class="signup">Sign up</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="main-hero">
+                <div class="container">
+                    <div class="m-head">
+                        <h1>Your Satisfaction <span> is Our Reward!</span></h1>
+                        <img src="assets/hero-banner.svg" alt="hero" />
+                    </div>
+                </div>
+            </div>
+            <div class="vs-search-box">
+                <h2>Search Vehicles</h2>
+
+                <div class="vs-search-controls">
+                    <div class="vs-search">
+                        <h3>By keywords</h3>
+                        <form class="vs-search-input">
+                            <i class="fa-light fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Keywords" />
+                        </form>
+                    </div>
+                    <div class="vs-filter">
+                        <h3>By filters</h3>
+                        <div class="vs-filter-input">
+                            <div class="vs-dropdown vs-dropdown1">
+                                <button onclick="toggleDropdownMenu(this)"><span>Make</span> <i class="fas fa-chevron-down"></i></button>
+                                <ul class="vs-dropdown-menu">
+                                    <li>Toyota</li>
+                                    <li>Nissan</li>
+                                    <li>Mitsubishi</li>
+                                </ul>
+                            </div>
+                            <div class="vs-dropdown vs-model-dropdown vs-dropdown1">
+                                <button onclick="toggleDropdownMenu(this)"><span>Model</span> <i class="fas fa-chevron-down"></i></button>
+                                <div class="vs-dropdown-menu vs-dropdown-menu">
+                                    <div class="vs-dropdown-search">
+                                        <input type="text" placeholder="Search model..." oninput="filterModels(this)" />
+                                    </div>
+                                    <ul class="vs-dropdown-list">
+                                        <li>AZR60</li>
+                                        <li>G114</li>
+                                        <li>X123</li>
+                                        <li>K9</li>
+                                        <!-- <li class="vs-any-option">Any</li> -->
+                                    </ul>
+                                    <div class="vs-no-results" style="display: none;">No result found</div>
+                                </div>
+                            </div>
+                            <div class="vs-dropdown vs-dropdown1">
+                                <button onclick="toggleDropdownMenu(this)"><span>Gear</span> <i class="fas fa-chevron-down"></i></button>
+                                <ul class="vs-dropdown-menu">
+                                    <li>Automatic</li>
+                                    <li>Manual</li>
+                                </ul>
+                            </div>
+                            <div class="year-filter">
+                                <div class="yaer-head">
+                                    <h1>Year</h1>
+                                </div>
+                                <div class="vs-dropdown vs-year-dropdown">
+                                    <button onclick="toggleDropdownMenu(this)"><span>Min</span> <i class="fas fa-chevron-down"></i></button>
+                                    <div class="vs-dropdown-menu">
+                                        <div class="vs-dropdown-search">
+                                            <input type="text" placeholder="Search year..." oninput="filterDropdown(this)" />
+                                        </div>
+                                        <ul class="vs-dropdown-list"></ul>
+                                        <div class="vs-no-results" style="display: none;">No result found</div>
+                                    </div>
+                                </div>
+                                <div class="vs-dropdown vs-year-dropdown">
+                                    <button onclick="toggleDropdownMenu(this)"><span>Max</span> <i class="fas fa-chevron-down"></i></button>
+                                    <div class="vs-dropdown-menu">
+                                        <div class="vs-dropdown-search">
+                                            <input type="text" placeholder="Search year..." oninput="filterDropdown(this)" />
+                                        </div>
+                                        <ul class="vs-dropdown-list"></ul>
+                                        <div class="vs-no-results" style="display: none;">No result found</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="vs-search-btn">Search</button>
+                </div>
+            </div>
+        </section>
+        <section class="search-main">
+            <div class="container search-by">
+                    <div class="tab-button-group">
+                    <button id="searchByTypeBtn" class="tab-button active">Search By Type</button>
+                    <button id="searchByMakeBtn" class="tab-button">Search By Make</button>
+                    </div>
+
+                    <div class="navigation" style="position: relative; display: flex; align-items: center;">
+                    <div id="leftArrow" class="nav-arrow left hidden">
+                       <i class="fa-regular fa-angle-left"></i>
+                    </div>
+                    <div id="gridContainer" class="grid-wrapper"></div>
+                    <div id="rightArrow" class="nav-arrow right">
+                        <i class="fa-regular fa-angle-right"></i>
+                    </div>
+                    </div>
+
+                    <div id="paginationDots" class="pagination-dots"></div>
+            </div>
+        </section>
+        <section>
+            <div class="arrive-bg">
+                <div class="container">
+                      <div class="heading-arrive">
+            <h2>New Arrivals</h2>
+            <a href="#" class="view-more">View More</a>
+        </div>
+
+        <div class="vehicle-grid">
+            <a href="#" class="vehicle-card">
+                <img src="assets/card-img.jpg" alt="Nissan Civilian" class="vehicle-hero">
+                <div class="vehicle-info">
+                    <h3>Nissan Civilian</h3>
+                    <p>Stock no: <span>9067</span> </p>
+                    <div class="price">$7,879 <span>Price (FOB)</span></div>
+                    <div class="specs">
+                        <div>
+                            <img src="assets/guage.svg" alt="Kilometer Icon">
+                           <h4> 490,000 km</h4>
+                        </div>
+                        <div>
+                            <img src="assets/manual.svg" alt="Manual Icon">
+                             <h4> Manual</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="vehicle-card">
+                <img src="assets/card-img.jpg" alt="Nissan Civilian" class="vehicle-hero">
+                <div class="vehicle-info">
+                    <h3>Nissan Civilian</h3>
+                    <p>Stock no: <span>9067</span> </p>
+                    <div class="price">$7,879 <span>Price (FOB)</span></div>
+                    <div class="specs">
+                        <div>
+                            <img src="assets/guage.svg" alt="Kilometer Icon">
+                           <h4> 490,000 km</h4>
+                        </div>
+                        <div>
+                            <img src="assets/manual.svg" alt="Manual Icon">
+                              <h4> Manual</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="vehicle-card">
+                <img src="assets/card-img.jpg" alt="Nissan Civilian" class="vehicle-hero">
+                <div class="vehicle-info">
+                    <h3>Nissan Civilian</h3>
+                    <p>Stock no: <span>9067</span> </p>
+                    <div class="price">$7,879 <span>Price (FOB)</span></div>
+                    <div class="specs">
+                        <div>
+                            <img src="assets/guage.svg" alt="Kilometer Icon">
+                           <h4> 490,000 km</h4>
+                        </div>
+                        <div>
+                            <img src="assets/manual.svg" alt="Manual Icon">
+                           <h4> Manual</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="vehicle-card">
+                <img src="assets/card-img.jpg" alt="Nissan Civilian" class="vehicle-hero">
+                <div class="vehicle-info">
+                    <h3>Nissan Civilian</h3>
+                    <p>Stock no: <span>9067</span> </p>
+                    <div class="price">$7,879 <span>Price (FOB)</span></div>
+                    <div class="specs">
+                        <div>
+                            <img src="assets/guage.svg" alt="Kilometer Icon">
+                           <h4> 490,000 km</h4>
+                        </div>
+                        <div>
+                            <img src="assets/manual.svg" alt="Manual Icon">
+                              <h4> Manual</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+       <a href="#" class="vehicle-card">
+                <img src="assets/card-img.jpg" alt="Nissan Civilian" class="vehicle-hero">
+                <div class="vehicle-info">
+                    <h3>Nissan Civilian</h3>
+                    <p>Stock no: <span>9067</span> </p>
+                    <div class="price">$7,879 <span>Price (FOB)</span></div>
+                    <div class="specs">
+                        <div>
+                            <img src="assets/guage.svg" alt="Kilometer Icon">
+                           <h4> 490,000 km</h4>
+                        </div>
+                        <div>
+                            <img src="assets/manual.svg" alt="Manual Icon">
+                              <h4> Manual</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+        </div>
+                </div>
+            </div>
+        </section>
+        <section class="stars-main">
+            <div class="container">
+                <div class="stats-container">
+        <div class="stat-card">
+            <div class="icon-circle">
+                <i class="fa-light fa-heart"></i>
+            </div>
+            <div class="stat-content">
+                <span class="stat-number">50+</span>
+                <span class="stat-text">Happy Customers</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="icon-circle">
+                <i class="fa-light fa-car-side"></i>
+            </div>
+            <div class="stat-content">
+                <span class="stat-number">750+</span>
+                <span class="stat-text">Total car sold</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="icon-circle">
+               <i class="fa-light fa-wrench"></i>
+            </div>
+            <div class="stat-content">
+                <span class="stat-number">75+</span>
+                <span class="stat-text">Cars in damage</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="icon-circle">
+                <i class="fa-light fa-award"></i>
+            </div>
+            <div class="stat-content">
+                <span class="stat-number">15</span>
+                <span class="stat-text">Years on the market</span>
+            </div>
+        </div>
+    </div>
+            </div>
+        </section>
+        <script src="js/script.js"></script>
+        <script src="js/header.js"></script>
+    </body>
+</html>
