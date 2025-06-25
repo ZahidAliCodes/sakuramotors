@@ -208,6 +208,10 @@ input {
     transform: rotate(180deg);
 }
 .vs-search-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
     background-color: var(--primary-color);
     color: white;
     padding: 14px 18px;
@@ -561,7 +565,9 @@ input {
 .m-head img {
     width: 100%;
 }
-
+.vs-search-btn i{
+    display: none;
+}
 @media (max-width: 1220px) {
     .container {
         width: 95%;
@@ -622,6 +628,9 @@ input {
     .vs-filter-input {
         gap: 12px;
     }
+    .vs-search-btn i{
+    display: block;
+}
 }
 
 @media (max-width: 600px) {
