@@ -233,3 +233,65 @@ window.onload = () => {
   calculateItemsPerPage();
   renderGridItems(activeData);
 };
+
+
+document.addEventListener('DOMContentLoaded', () => {
+            const slidesWrapper = document.getElementById('slidesWrapper');
+            const prevButton = document.getElementById('prevButton');
+            const nextButton = document.getElementById('nextButton');
+            const dotNavigation = document.getElementById('dotNavigation');
+            const slides = document.querySelectorAll('.slide');
+            let currentIndex = 0;
+
+            // Function to update the slider position
+            const updateSlider = () => {
+                const offset = -currentIndex * 100;
+                slidesWrapper.style.transform = `translateX(${offset}%)`;
+                updateDots();
+            };
+
+            // Function to create and update navigation dots
+            const createDots = () => {
+                dotNavigation.innerHTML = ''; // Clear existing dots
+                slides.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.classList.add('dot-hero');
+                    if (index === currentIndex) {
+                        dot.classList.add('active');
+                    }
+                    dot.addEventListener('click', () => {
+                        currentIndex = index;
+                        updateSlider();
+                    });
+                    dotNavigation.appendChild(dot);
+                });
+            };
+
+            // Function to update active dot
+            const updateDots = () => {
+                const dots = document.querySelectorAll('.dot-hero');
+                dots.forEach((dot, index) => {
+                    if (index === currentIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            };
+
+            // Event listener for previous button
+            prevButton.addEventListener('click', () => {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+                updateSlider();
+            });
+
+            // Event listener for next button
+            nextButton.addEventListener('click', () => {
+                currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+                updateSlider();
+            });
+
+            // Initialize slider and dots
+            createDots();
+            updateSlider();
+        });
