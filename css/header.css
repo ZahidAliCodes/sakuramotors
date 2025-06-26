@@ -1,7 +1,12 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 .header-container {
+    max-width: 1291px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 7%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,6 +19,7 @@
     justify-content: space-between;
 }
 .navbar {
+    height: 104px;
     padding: 20px 0;
     background: var(--white);
 }
