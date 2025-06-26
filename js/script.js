@@ -1,87 +1,93 @@
-function toggleDropdownMenu(button) {
-  const dropdown = button.parentElement;
-  const allDropdowns = document.querySelectorAll('.vs-dropdown');
+  function toggleDropdownMenu(button) {
+    const dropdown = button.parentElement;
+    const allDropdowns = document.querySelectorAll('.vs-dropdown');
 
-  allDropdowns.forEach(d => {
-    if (d !== dropdown) d.classList.remove('open');
+    allDropdowns.forEach(d => {
+      if (d !== dropdown) d.classList.remove('open');
+    });
+
+    dropdown.classList.toggle('open');
+  }
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".vs-dropdown")) {
+      document.querySelectorAll(".vs-dropdown").forEach(d => d.classList.remove("open"));
+    }
   });
 
-  dropdown.classList.toggle('open');
-}
+  $.fn.select2.amd.require(['select2/dropdown/attachBody'], function (AttachBody) {
+    const originalPositionDropdown = AttachBody.prototype._positionDropdown;
 
-document.addEventListener("click", function (e) {
-  if (!e.target.closest(".vs-dropdown")) {
-    document.querySelectorAll(".vs-dropdown").forEach(d => d.classList.remove("open"));
+    AttachBody.prototype._positionDropdown = function () {
+      const offset = this.$container.offset();
+      const containerHeight = this.$container.outerHeight(false);
+
+      const dropdownCss = {
+        top: offset.top + containerHeight + "px",
+        left: offset.left + "px",
+        width: this.$container.outerWidth(false) + "px",
+        position: 'absolute'
+      };
+
+      this.$dropdownContainer.css(dropdownCss);
+
+      this._reposition = false;
+
+      this.$dropdownContainer.find('.select2-dropdown').css({
+        transform: 'none'
+      });
+    };
+  });
+
+  function activateDropdown(selector) {
+    const $select = $(selector);
+
+    $select.select2({
+      minimumResultsForSearch: 0,
+      dropdownParent: $select.closest('.vs-select-wrapper')
+    });
+
+    $select.on('select2:opening', function () {
+      $select.closest('.vs-select-wrapper').addClass('select-open');
+    });
+
+    $select.on('select2:closing', function () {
+      $select.closest('.vs-select-wrapper').removeClass('select-open');
+    });
+
+    $select.on('select2:select', function (e) {
+      const container = $(this).next('.select2-container').find('.select2-selection--single');
+      if (e.params.data.id !== '') {
+        container.addClass('red-selected');
+      } else {
+        container.removeClass('red-selected');
+      }
+    });
+$select.on('select2:open', function () {
+  if (window.innerWidth <= 768) {
+    const offsetTop = $(this).offset().top;
+    $('html, body').animate({
+      scrollTop: offsetTop - 100
+    }, 300);
   }
 });
-
-function filterModels(input) {
-  const searchTerm = input.value.toLowerCase();
-  const dropdown = input.closest(".vs-dropdown");
-  const items = dropdown.querySelectorAll(".vs-dropdown-list li");
-  const noResult = dropdown.querySelector(".vs-no-results");
-
-  let matchCount = 0;
-  items.forEach(li => {
-    const text = li.textContent.toLowerCase();
-    li.style.display = text.includes(searchTerm) ? "block" : "none";
-    if (text.includes(searchTerm)) matchCount++;
-  });
-
-  noResult.style.display = matchCount === 0 ? "block" : "none";
-}
-
-function filterDropdown(input) {
-  const searchTerm = input.value.toLowerCase();
-  const dropdown = input.closest(".vs-dropdown");
-  const items = dropdown.querySelectorAll(".vs-dropdown-list li");
-  const noResult = dropdown.querySelector(".vs-no-results");
-
-  let matchCount = 0;
-  items.forEach(li => {
-    const text = li.textContent.toLowerCase();
-    li.style.display = text.includes(searchTerm) ? "block" : "none";
-    if (text.includes(searchTerm)) matchCount++;
-  });
-
-  noResult.style.display = matchCount === 0 ? "block" : "none";
-}
-
-function populateYearDropdowns() {
-  const yearDropdowns = document.querySelectorAll(".vs-year-dropdown .vs-dropdown-list");
-  for (let year = 2000; year <= 2025; year++) {
-    yearDropdowns.forEach(list => {
-      const li = document.createElement("li");
-      li.textContent = year;
-      list.appendChild(li);
+    $select.closest('.vs-select-wrapper').on('click', function () {
+      $select.select2('open');
     });
   }
 
-  setTimeout(addDropdownItemListeners, 100);
-}
+  $(document).ready(function () {
+    activateDropdown('#makeSelect');
+    activateDropdown('#modelSelect');
+    activateDropdown('#gearSelect');
+    activateDropdown('#yearMin');
+    activateDropdown('#yearMax');
 
-function addDropdownItemListeners() {
-  const allItems = document.querySelectorAll(".vs-dropdown-menu li");
-  allItems.forEach(item => {
-    item.addEventListener("click", function () {
-      const dropdown = item.closest(".vs-dropdown");
-      const span = dropdown.querySelector("button span");
-
-      // Set selected text
-      span.textContent = item.textContent;
-
-      // Make the selected text red
-      span.style.color = "#343434";
-
-      dropdown.classList.remove("open");
-    });
+    for (let year = 2000; year <= 2025; year++) {
+      $('#yearMin').append(`<option value="${year}">${year}</option>`);
+      $('#yearMax').append(`<option value="${year}">${year}</option>`);
+    }
   });
-}
-
-populateYearDropdowns();
-addDropdownItemListeners();
-
-// Search Input red border on focus and typing
 const input = document.querySelector(".vs-search-input input");
 const form = document.querySelector(".vs-search-input");
 
