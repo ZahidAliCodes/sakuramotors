@@ -110,3 +110,30 @@
     color: var(--white);
     transition: color 0.3s ease;
 }
+@media screen and (max-width: 1260px) {
+    .copyright {
+        width: 90%;
+    }
+    .footer-right,
+    .footer-container {
+        flex-direction: column;
+    }
+    .footer-container {
+        padding: 0 20px;
+    }
+    .footer-right,
+    .about-us {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .back-to-top {
+        top: -33px;
+    }
+    .footer-right {
+        margin: 0 0 50px 0;
+    }
+    .footer-right .footer-section {
+        width: 100%;
+    }
+}
