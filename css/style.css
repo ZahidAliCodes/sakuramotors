@@ -1066,14 +1066,17 @@ input {
 .view-mbl {
     display: none;
 }
+@media (max-width: 1320px){
+.nav-arrow.right {
+    right: -25px;
+}
+}
 @media (max-width: 1220px) {
     .container {
         width: 90%;
         overflow: hidden;
     }
-.nav-arrow.right {
-    right: -25px;
-}
+
 
 
     .grid-wrapper {
@@ -1179,7 +1182,12 @@ input {
     font-size: 20px;
     line-height: 30px;
   }
-
+.bg-shadow {
+    top: -10vh;
+    left: -17vw;
+    height: 69vh;
+    width: 100vw;
+}
   .dot-ft {
     position: static;
     margin: 24px;

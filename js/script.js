@@ -1,93 +1,42 @@
-  function toggleDropdownMenu(button) {
-    const dropdown = button.parentElement;
-    const allDropdowns = document.querySelectorAll('.vs-dropdown');
+     function activateDropdown(selector) {
+      const $select = $(selector);
 
-    allDropdowns.forEach(d => {
-      if (d !== dropdown) d.classList.remove('open');
-    });
-
-    dropdown.classList.toggle('open');
-  }
-
-  document.addEventListener("click", function (e) {
-    if (!e.target.closest(".vs-dropdown")) {
-      document.querySelectorAll(".vs-dropdown").forEach(d => d.classList.remove("open"));
-    }
-  });
-
-  $.fn.select2.amd.require(['select2/dropdown/attachBody'], function (AttachBody) {
-    const originalPositionDropdown = AttachBody.prototype._positionDropdown;
-
-    AttachBody.prototype._positionDropdown = function () {
-      const offset = this.$container.offset();
-      const containerHeight = this.$container.outerHeight(false);
-
-      const dropdownCss = {
-        top: offset.top + containerHeight + "px",
-        left: offset.left + "px",
-        width: this.$container.outerWidth(false) + "px",
-        position: 'absolute'
-      };
-
-      this.$dropdownContainer.css(dropdownCss);
-
-      this._reposition = false;
-
-      this.$dropdownContainer.find('.select2-dropdown').css({
-        transform: 'none'
+      $select.select2({
+        minimumResultsForSearch: 0,
+        dropdownParent: $select.closest('.vs-select-wrapper')
       });
-    };
-  });
 
-  function activateDropdown(selector) {
-    const $select = $(selector);
+      $select.on('select2:opening', function () {
+        $select.closest('.vs-select-wrapper').addClass('select-open');
+      });
 
-    $select.select2({
-      minimumResultsForSearch: 0,
-      dropdownParent: $select.closest('.vs-select-wrapper')
-    });
+      $select.on('select2:closing', function () {
+        $select.closest('.vs-select-wrapper').removeClass('select-open');
+      });
 
-    $select.on('select2:opening', function () {
-      $select.closest('.vs-select-wrapper').addClass('select-open');
-    });
+      $select.on('select2:select', function (e) {
+        const container = $(this).next('.select2-container').find('.select2-selection--single');
 
-    $select.on('select2:closing', function () {
-      $select.closest('.vs-select-wrapper').removeClass('select-open');
-    });
+        if (e.params.data.id !== '') {
+          container.addClass('red-selected');
+        } else {
+          container.removeClass('red-selected');
+        }
+      });
+    }
 
-    $select.on('select2:select', function (e) {
-      const container = $(this).next('.select2-container').find('.select2-selection--single');
-      if (e.params.data.id !== '') {
-        container.addClass('red-selected');
-      } else {
-        container.removeClass('red-selected');
+    $(document).ready(function () {
+      activateDropdown('#makeSelect');
+      activateDropdown('#modelSelect');
+      activateDropdown('#gearSelect');
+      activateDropdown('#yearMin');
+      activateDropdown('#yearMax');
+
+      for (let year = 2000; year <= 2025; year++) {
+        $('#yearMin').append(`<option value="${year}">${year}</option>`);
+        $('#yearMax').append(`<option value="${year}">${year}</option>`);
       }
     });
-$select.on('select2:open', function () {
-  if (window.innerWidth <= 768) {
-    const offsetTop = $(this).offset().top;
-    $('html, body').animate({
-      scrollTop: offsetTop - 100
-    }, 0);
-  }
-});
-    $select.closest('.vs-select-wrapper').on('click', function () {
-      $select.select2('open');
-    });
-  }
-
-  $(document).ready(function () {
-    activateDropdown('#makeSelect');
-    activateDropdown('#modelSelect');
-    activateDropdown('#gearSelect');
-    activateDropdown('#yearMin');
-    activateDropdown('#yearMax');
-
-    for (let year = 2000; year <= 2025; year++) {
-      $('#yearMin').append(`<option value="${year}">${year}</option>`);
-      $('#yearMax').append(`<option value="${year}">${year}</option>`);
-    }
-  });
 const input = document.querySelector(".vs-search-input input");
 const form = document.querySelector(".vs-search-input");
 
