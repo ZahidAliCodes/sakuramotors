@@ -145,4 +145,7 @@
     .footer-right .footer-section {
         width: 100%;
     }
+    .footer{
+        padding: 32px 0;    
+    }
 }

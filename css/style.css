@@ -1145,27 +1145,42 @@ input {
         flex: 0 0 236px; /* Show one full card and part of the second */
         scroll-snap-align: start;
     }
-    .slide {
-        flex-direction: column-reverse;
-        align-items: center;
-        padding: 0 30px;
-    }
-    .dot-ft {
-        position: static;
-        justify-content: center;
-        margin: 18px 0 0 0;
-    }
+   
     .steps {
         margin: 0;
     }
-    .slider-container {
-        padding: 24px;
-    }
+  
 }
 @media (max-width: 1030px) {
     .vs-search-box {
         margin: -161px auto 0;
     }
+     .slide {
+    flex-direction: column-reverse;
+    gap: 32px;
+    padding: 32px;
+  }
+
+  .quote-image-wrapper {
+    width: 295px;
+    height: 295px;
+  }
+
+  .testimonial-content h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .grate-desc {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .dot-ft {
+    position: static;
+    margin: 24px;
+    justify-content: center;
+  }
 }
 @media (max-width: 900px) {
     .vs-search-box {
@@ -1197,11 +1212,6 @@ input {
     .vs-search-btn i {
         display: block;
     }
-
-    .quote-icon {
-        bottom: 40px;
-        left: 50px;
-    }
     .nav-button.prev {
         left: -1.25rem;
     }
@@ -1229,28 +1239,75 @@ input {
         justify-content: space-between;
         width: -webkit-fill-available;
     }
+    .bg-shadow {
+    height: 70vh;
+}
+   
 }
 
 @media (max-width: 600px) {
+     .stat-card{
+        padding: 12px;
+        height: 92px;
+        position: relative;
+        align-items: flex-start;
+    }
+    .stats-container{
+        gap: 8px;
+    }
+    .stat-text {
+        font-size: 14px;
+        position: absolute;
+        bottom: 8px;
+        left: 14px;
+    }
+    .icon-circle{
+        height: 40px;
+        width: 40px;
+    }
+    .stat-number{
+        font-size: 24px;
+    }
+    .stat-text{
+        font-size: 14px;
+    }
     .grid-wrapper {
-        grid-template-columns: repeat(2, 1fr);
+       
+        gap: 8px;
+    }
+        .grid-item {
+        padding:16px 8px;
+    }
+.grid-item-title {
+    font-size: 14px;
+}
+.vehicle-type-image {
+  width: 80%;
+}
+
+.vehicle-make-image {
+  width: 34%;
+}
+    .grid-item{
+        height: 112px;
     }
     .vs-search-box h2 {
         text-align: center;
     }
     .tab-button-group {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 12px;
     }
     .vs-year-dropdown .vs-dropdown-menu {
         left: -70px;
     }
     .tab-button {
-        width: 90%;
-        margin: 0 auto;
+        width: 100%;
+        padding: 13px 10px;
+        font-size: 16px;
     }
-    .stats-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
+    
     .m-head h1 {
         margin: 0;
         font-size: 40px;
@@ -1303,27 +1360,47 @@ input {
         width: 80%;
         display: none;
     }
-    .slider-container {
-        margin: 20px 0 48px 0;
-    }
+ 
     .heading-arrive {
         margin: 20px 0;
     }
+    .icon-circle i {
+    font-size: 22px;
+}
+.bg-shadow {
+    top: -13vh;
+    left: -39vw;
+    height: 77vh;
+    width: 94vw;
+    transform: rotate(87deg);
+}
+.bg-relative2 .bg-shadow2 {
+    top: 24vh;
+    height: 55vh;
+    width: 60vh;
+}
+.grid-wrapper{
+    margin: 24px 0;
+}
+.grid-wrapper,
+.search-by{
+    padding: 24px 0;
+}
 }
 
 @media (max-width: 430px) {
-    .grid-wrapper {
-        padding: 0 0 100px 0;
-    }
+  .bg-relative2{
+    padding: 48px 0;
+  }
+  .social-link-main {
+    margin: 60px 0 0 0;
+}
     .vs-search-box {
         margin: -290px auto 0;
     }
 
     .logo {
         width: 85px !important;
-    }
-    .grid-wrapper {
-        grid-template-columns: 1fr;
     }
     .m-head h1 {
         font-size: 30px;
@@ -1339,25 +1416,17 @@ input {
         font-size: 24px;
         text-align: center;
     }
-    .quote-image-wrapper {
-        padding: 85px;
-    }
-    .quote-icon {
-        bottom: 70px;
-        left: 85px;
-    }
-    .arrive-bg {
-        padding: 70px 0 70px 0;
+ 
+      .arrive-bg {
+        padding: 200px 0 70px 0;
     }
     .bg-relative {
         padding: 70px 0 100px 0;
     }
     .arrive-bg2 {
-        padding: 220px 0 100px 0;
+        padding: 220px 0 32px 0;
     }
-    .slide {
-        gap: 0;
-    }
+   
 }
 @media (max-width: 380px) {
     .testimonial-content h2 {
@@ -1378,6 +1447,17 @@ input {
     .grate-desc {
         font-size: 18px;
     }
+        .stat-text {
+        font-size: 12px;
+    }
+        .bg-shadow {
+        height: 71vh;
+        width: 94vw;
+        transform: rotate(87deg);
+    }
+    .arrow-icon{
+        display: block;
+    }
 }
 @media (max-width: 350px) {
     .m-head h1 {
@@ -1395,4 +1475,59 @@ input {
     .arc-3 {
         left: -30% !important;
     }
+        .bg-shadow {
+        height: 63vh;
+        width: 100vw
+320px
+;
+        transform: rotate(101deg);
+    }
+    .grid-wrapper{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+        .vehicle-make-image {
+        width: 20%
+;
+    }
+      .grid-wrapper {
+        padding: 0 0 100px 0;
+    }
+        .arrive-bg {
+        padding: 130px 0 70px 0;
+    }
+     .slide {
+    padding: 16px;
+    gap: 20px;
+  }
+
+  .quote-image-wrapper {
+    width: 240px;
+    height: 240px;
+  }
+.quote-icon img{
+    width: 50%;
+}
+  .quote-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .testimonial-content h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .grate-desc {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .date-on {
+    font-size: 11px;
+  }
+
+  .star-rating i {
+    font-size: 20px;
+  }
 }

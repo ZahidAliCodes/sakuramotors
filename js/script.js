@@ -68,7 +68,7 @@ $select.on('select2:open', function () {
     const offsetTop = $(this).offset().top;
     $('html, body').animate({
       scrollTop: offsetTop - 100
-    }, 300);
+    }, 0);
   }
 });
     $select.closest('.vs-select-wrapper').on('click', function () {
@@ -160,12 +160,21 @@ function renderGridItems(dataSet) {
     const link = document.createElement('a');
     link.className = 'grid-item';
     link.href = item.url;
+
+    // Determine the class for the image based on which data set is used.
+    let imageClass = '';
+    if (dataSet === vehicleTypes) {
+      imageClass = 'vehicle-type-image';
+    } else if (dataSet === vehicleMakes) {
+      imageClass = 'vehicle-make-image';
+    }
+
     link.innerHTML = `
       <div class="grid-item-title">
         ${item.type} (${item.count})
         <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
       </div>
-      <img src="${item.image}" alt="${item.type}" />
+      <img src="${item.image}" alt="${item.type}" class="${imageClass}" />
     `;
     gridContainer.appendChild(link);
   });
@@ -173,6 +182,7 @@ function renderGridItems(dataSet) {
   updateArrowVisibility(dataSet);
   renderPaginationDots(dataSet);
 }
+
 
 function updateArrowVisibility(dataSet) {
   const totalPages = Math.ceil(dataSet.length / itemsPerPage);
@@ -249,14 +259,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const slides = document.querySelectorAll('.slide');
             let currentIndex = 0;
 
-            // Function to update the slider position
             const updateSlider = () => {
                 const offset = -currentIndex * 100;
                 slidesWrapper.style.transform = `translateX(${offset}%)`;
                 updateDots();
             };
 
-            // Function to create and update navigation dots
             const createDots = () => {
                 dotNavigation.innerHTML = ''; // Clear existing dots
                 slides.forEach((_, index) => {
@@ -273,7 +281,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             };
 
-            // Function to update active dot
             const updateDots = () => {
                 const dots = document.querySelectorAll('.dot-hero');
                 dots.forEach((dot, index) => {
@@ -285,19 +292,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             };
 
-            // Event listener for previous button
             prevButton.addEventListener('click', () => {
                 currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
                 updateSlider();
             });
 
-            // Event listener for next button
             nextButton.addEventListener('click', () => {
                 currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
                 updateSlider();
             });
 
-            // Initialize slider and dots
             createDots();
             updateSlider();
         });
