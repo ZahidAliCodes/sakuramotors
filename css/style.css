@@ -1182,6 +1182,12 @@ input {
         width: 80%;
         display: none;
     }
+    .slider-container{
+        margin: 20px 0 48px 0;
+    }
+    .heading-arrive {
+    margin: 20px 0;
+}
 }
 
 @media (max-width: 430px) {
@@ -1204,8 +1210,12 @@ input {
     .search-main {
         clip-path: ellipse(200% 55% at 50% 38%);
     }
+    .how-it-works h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
     .heading-arrive h2 {
-        font-size: 26px;
+        font-size: 24px;
         text-align: center;
     }
     .quote-image-wrapper {

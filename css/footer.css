@@ -64,14 +64,20 @@
     height: 80px;
 }
 .about-us .contact-info-footer {
-    font-family: var(--font-heading);
+   align-items: center;
+    display: flex;
+    gap: 8px;
+}
+.about-us .contact-info-footer p{
+    color: var(--primary-color);
+     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
-    color: var(--primary-color);
+    opacity: 100%;
+
 }
 .about-us .contact-info-footer i {
-    margin-right: 8px;
     color: var(--primary-color);
 }
 .copyright {
@@ -109,6 +115,9 @@
     font-size: 16px;
     color: var(--white);
     transition: color 0.3s ease;
+}
+.footer-container span{
+    color: var(--white);
 }
 @media screen and (max-width: 1260px) {
     .copyright {
