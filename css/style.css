@@ -1071,6 +1071,10 @@ input {
         width: 90%;
         overflow: hidden;
     }
+.nav-arrow.right {
+    right: -25px;
+}
+
 
     .grid-wrapper {
         grid-template-columns: repeat(3, 1fr);
