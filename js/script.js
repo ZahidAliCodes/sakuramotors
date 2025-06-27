@@ -1,42 +1,64 @@
-     function activateDropdown(selector) {
-      const $select = $(selector);
+function activateDropdown(selector) {
+  const $select = $(selector);
 
-      $select.select2({
-        minimumResultsForSearch: 0,
-        dropdownParent: $select.closest('.vs-select-wrapper')
-      });
+  $select.select2({
+    minimumResultsForSearch: 0,
+    dropdownParent: $select.closest('.vs-select-wrapper')
+  });
 
-      $select.on('select2:opening', function () {
-        $select.closest('.vs-select-wrapper').addClass('select-open');
-      });
+ $select.on('select2:open', function () {
+  let $dropdown = $('.select2-container--open .select2-dropdown');
 
-      $select.on('select2:closing', function () {
-        $select.closest('.vs-select-wrapper').removeClass('select-open');
-      });
-
-      $select.on('select2:select', function (e) {
-        const container = $(this).next('.select2-container').find('.select2-selection--single');
-
-        if (e.params.data.id !== '') {
-          container.addClass('red-selected');
-        } else {
-          container.removeClass('red-selected');
-        }
-      });
-    }
-
-    $(document).ready(function () {
-      activateDropdown('#makeSelect');
-      activateDropdown('#modelSelect');
-      activateDropdown('#gearSelect');
-      activateDropdown('#yearMin');
-      activateDropdown('#yearMax');
-
-      for (let year = 2000; year <= 2025; year++) {
-        $('#yearMin').append(`<option value="${year}">${year}</option>`);
-        $('#yearMax').append(`<option value="${year}">${year}</option>`);
-      }
+  setTimeout(function () {
+    $dropdown.css({
+      top: '100%',
+      bottom: 'auto',
+      transform: 'none',
+      position: 'absolute',
+      left: '0'
     });
+  }, 0);
+
+  $select.closest('.vs-select-wrapper').addClass('select-open');
+});
+
+  $select.on('select2:closing', function () {
+    $select.closest('.vs-select-wrapper').removeClass('select-open');
+  });
+
+  $select.on('select2:select', function (e) {
+    const container = $(this).next('.select2-container').find('.select2-selection--single');
+
+    if (e.params.data.id !== '') {
+      container.addClass('red-selected');
+    } else {
+      container.removeClass('red-selected');
+    }
+  });
+}
+
+$(document).ready(function () {
+  activateDropdown('#makeSelect');
+  activateDropdown('#modelSelect');
+  activateDropdown('#gearSelect');
+  activateDropdown('#yearMin');
+  activateDropdown('#yearMax');
+
+  for (let year = 2000; year <= 2025; year++) {
+    $('#yearMin').append(`<option value="${year}">${year}</option>`);
+    $('#yearMax').append(`<option value="${year}">${year}</option>`);
+  }
+
+  $('.vs-select-wrapper').on('click', function (e) {
+    if ($(e.target).closest('.select2-container').length) return;
+    const $select = $(this).find('select');
+    $select.select2('open');
+  });
+});
+
+
+
+
 const input = document.querySelector(".vs-search-input input");
 const form = document.querySelector(".vs-search-input");
 
