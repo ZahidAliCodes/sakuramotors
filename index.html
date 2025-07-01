@@ -29,8 +29,8 @@
                         </div>
                         <nav class="nav-links">
                             <ul>
-                                <li><a href="#" class="active">Home</a></li>
-                                <li><a href="#">Stock</a></li>
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li><a href="stock.html">Stock</a></li>
                                 <li class="dropdown">
                                     <a href="#">About Us <i class="fas fa-chevron-down"></i></a>
                                     <ul class="dropdown-menu">
@@ -105,8 +105,8 @@
                     </div>
 
                     <div class="auth-buttons">
-                        <button class="login">Log in</button>
-                        <button class="signup">Sign up</button>
+                        <a href="#" class="login">Log in</a>
+                        <a href="#" class="signup">Sign up</a>
                     </div>
                 </div>
             </div>
@@ -115,7 +115,12 @@
             <div class="main-hero">
                 <div class="container">
                     <div class="m-head">
-                        <h1>Your Satisfaction <span> is Our Reward!</span></h1>
+                        <h1>
+                            <span class="word">Your</span>
+                            <span class="word">Satisfaction</span>
+                            <span class="word last">is Our Reward!</span>
+                        </h1>
+
                         <img src="assets/hero-banner.svg" alt="hero" />
                     </div>
                 </div>
@@ -134,60 +139,59 @@
                         </div>
                         <div class="vs-filter">
                             <h3>By filters</h3>
-                     <div class="vs-filter-input">
-  <!-- Make -->
-  <div class="vs-select-wrapper">
-    <select id="makeSelect" class="vs-select">
-      <option value="">Make</option>
-      <option value="Toyota">Toyota</option>
-      <option value="Nissan">Nissan</option>
-      <option value="Mitsubishi">Mitsubishi</option>
-    </select>
-    <i class="fas fa-chevron-down vs-chevron"></i>
-  </div>
+                            <div class="vs-filter-input">
+                                <!-- Make -->
+                                <div class="vs-select-wrapper">
+                                    <select id="makeSelect" class="vs-select">
+                                        <option value="">Make</option>
+                                        <option value="Toyota">Toyota</option>
+                                        <option value="Nissan">Nissan</option>
+                                        <option value="Mitsubishi">Mitsubishi</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down vs-chevron"></i>
+                                </div>
 
-  <!-- Model -->
-  <div class="vs-select-wrapper">
-    <select id="modelSelect" class="vs-select">
-      <option value="">Model</option>
-      <option value="AZR60">AZR60</option>
-      <option value="G114">G114</option>
-      <option value="X123">X123</option>
-      <option value="K9">K9</option>
-    </select>
-    <i class="fas fa-chevron-down vs-chevron"></i>
-  </div>
+                                <!-- Model -->
+                                <div class="vs-select-wrapper">
+                                    <select id="modelSelect" class="vs-select">
+                                        <option value="">Model</option>
+                                        <option value="AZR60">AZR60</option>
+                                        <option value="G114">G114</option>
+                                        <option value="X123">X123</option>
+                                        <option value="K9">K9</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down vs-chevron"></i>
+                                </div>
 
-  <!-- Gear -->
-  <div class="vs-select-wrapper">
-    <select id="gearSelect" class="vs-select">
-      <option value="">Gear</option>
-      <option value="Automatic">Automatic</option>
-      <option value="Manual">Manual</option>
-    </select>
-    <i class="fas fa-chevron-down vs-chevron"></i>
-  </div>
+                                <!-- Gear -->
+                                <div class="vs-select-wrapper">
+                                    <select id="gearSelect" class="vs-select">
+                                        <option value="">Gear</option>
+                                        <option value="Automatic">Automatic</option>
+                                        <option value="Manual">Manual</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down vs-chevron"></i>
+                                </div>
 
-  <!-- Year Range -->
-  <div class="year-range">
-    <div class="year-label">Year</div>
-    <div class="year-select-wrapper">
-      <div class="vs-select-wrapper">
-        <select id="yearMin" class="vs-select">
-          <option value="">Min</option>
-        </select>
-        <i class="fas fa-chevron-down vs-chevron"></i>
-      </div>
-      <div class="vs-select-wrapper">
-        <select id="yearMax" class="vs-select">
-          <option value="">Max</option>
-        </select>
-        <i class="fas fa-chevron-down vs-chevron"></i>
-      </div>
-    </div>
-  </div>
-</div>
-
+                                <!-- Year Range -->
+                                <div class="year-range">
+                                    <div class="year-label">Year</div>
+                                    <div class="year-select-wrapper">
+                                        <div class="vs-select-wrapper vs-select-wrapper-min">
+                                            <select id="yearMin" class="vs-select">
+                                                <option value="">Min</option>
+                                            </select>
+                                            <i class="fas fa-chevron-down vs-chevron"></i>
+                                        </div>
+                                        <div class="vs-select-wrapper vs-select-wrapper-max">
+                                            <select id="yearMax" class="vs-select">
+                                                <option value="">Max</option>
+                                            </select>
+                                            <i class="fas fa-chevron-down vs-chevron"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <button class="vs-search-btn"><i class="fa-regular fa-magnifying-glass"></i>Search</button>
@@ -801,6 +805,8 @@
             </div>
         </footer>
         <!-- jQuery + Select2 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <script src="js/script.js"></script>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SakuraMotors</title>
+        <link rel="icon" type="image/x-icon" href="assets/logo.svg" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <!-- link offline font fontawesome pro -->
+        <link rel="stylesheet" href="icon/css/all.min.css" />
+        <link rel="stylesheet" href="icon/css/sharp-solid.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="header-container">
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.svg" alt="Sakura Motors" />
+                    </a>
+                    <div class="nav-main">
+                        <div class="desktop-contact">
+                            <a href="https://wa.me/81298683668" target="_blank">
+                                <i class="fa-regular c-t-a fa-phone"></i>
+                                <span>+81-29-868-3668</span>
+                            </a>
+                        </div>
+                        <nav class="nav-links">
+                            <ul>
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li><a href="stock.html">Stock</a></li>
+                                <li class="dropdown">
+                                    <a href="#">About Us <i class="fas fa-chevron-down"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">About Company</a></li>
+                                        <li><a href="#">Gallery</a></li>
+                                        <li><a href="#">Payment</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li class="dropdown">
+                                    <a href="#">Whatsapp <i class="fas fa-chevron-down"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="https://wa.me/818068823553" target="_blank">Japan: +81-80-6882-3553</a></li>
+                                        <li><a href="https://wa.me/255716787502" target="_blank">Tanzania: +255-716-787-502</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="auth-buttons auth-buttons-desk">
+                        <button class="login">Log in</button>
+                        <button class="signup">Sign up</button>
+                    </div>
+                    <div class="support-main">
+                        <div class="support-btn">
+                            <i class="fa-regular fa-phone"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="hamburger" onclick="toggleMenu()">
+                            <i class="fa-regular fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="top-row">
+                    <div class="logo">
+                        <img src="assets/logo.svg" alt="Sakura Motors" />
+                    </div>
+                    <div class="support-main">
+                        <div class="support-btn">
+                            <i class="fa-regular fa-phone"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="icons">
+                            <i class="fa-regular fa-xmark-large" onclick="toggleMenu()"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="mbl-bottom">
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">Stock</a></li>
+                        <li><a href="#">Company Profile</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Payment</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                    <div class="cont-info">
+                        <h1><i class="fa-brands fa-whatsapp"></i> Whatsapp:</h1>
+                        <p>
+                            Japan: <a href="https://wa.me/818068823553" target="_blank"><strong>+81-80-6882-3553</strong></a>
+                        </p>
+                        <p>
+                            Tanzania: <a href="https://wa.me/255716787502" target="_blank"><strong>+255-716-787-502</strong></a>
+                        </p>
+                    </div>
+
+                    <div class="auth-buttons">
+                        <a href="#" class="login">Log in</a>
+                        <a href="#" class="signup">Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+     
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section about-us">
+                    <div class="about-us-contact">
+                        <a href="index.html" class="footer-logo">
+                            <img src="assets/logo.svg" alt="Sakura Motors Footer Logo" />
+                        </a>
+                        <div class="contact-info-footer">
+                            <i class="fa-regular fa-phone"></i>
+                            <p>+81-29-868-3668</p>
+                        </div>
+                    </div>
+                    <p>
+                        We believe in offering you the best customer service possible. We have been in the vehicle trading business for over 15 years in Japan. Our new company, established in 2011, is even better equipped to provide you
+                        with your dream vehicle.
+                    </p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-section helpful-links">
+                        <h3>Helpful Links</h3>
+                        <ul>
+                            <li><a href="#" class="active-ft">Home</a></li>
+                            <li><a href="#">Stock</a></li>
+                            <li><a href="#">About Company</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section contact-details">
+                        <h3>Contact</h3>
+                        <p><strong>Email:</strong> info@sakuramotors.com</p>
+                        <p><strong>Phone Office:</strong><span> +81-29-868-3668</span></p>
+                        <p><strong>Phone Mobile:</strong><span> +81-90-9945-6908, +81-90-9345-1234</span></p>
+                        <p><strong>Fax:</strong><span> +81-29-868-3669</span></p>
+                    </div>
+                    <div class="footer-section visit-us">
+                        <h3>Visit Us</h3>
+                        <p><strong>Showroom:</strong> Ibaraki Ken, Tsukuba Shi, Gakuen Minami, 3 - 48 - 48, 〒 305 - 0818</p>
+                        <p><strong>Yard:</strong> Ibaraki Ken, Banda shi, Matate, 1086-1, 〒 306 - 0605</p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 All rights reserved</p>
+                <a href="#" class="back-to-top">Back to the top <i class="fas fa-chevron-up"></i></a>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script src="js/header.js"></script>
+    </body>
+</html>

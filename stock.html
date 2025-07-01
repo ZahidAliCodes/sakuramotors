@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SakuraMotors</title>
+        <link rel="icon" type="image/x-icon" href="assets/logo.svg" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/stock.css" />
+        <!-- link offline font fontawesome pro -->
+        <link rel="stylesheet" href="icon/css/all.min.css" />
+        <link rel="stylesheet" href="icon/css/sharp-solid.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="header-container">
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.svg" alt="Sakura Motors" />
+                    </a>
+                    <div class="nav-main">
+                        <div class="desktop-contact">
+                            <a href="https://wa.me/81298683668" target="_blank">
+                                <i class="fa-regular c-t-a fa-phone"></i>
+                                <span>+81-29-868-3668</span>
+                            </a>
+                        </div>
+                        <nav class="nav-links">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="stock.html" class="active">Stock</a></li>
+                                <li class="dropdown">
+                                    <a href="#">About Us <i class="fas fa-chevron-down"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">About Company</a></li>
+                                        <li><a href="#">Gallery</a></li>
+                                        <li><a href="#">Payment</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li class="dropdown">
+                                    <a href="#">Whatsapp <i class="fas fa-chevron-down"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="https://wa.me/818068823553" target="_blank">Japan: +81-80-6882-3553</a></li>
+                                        <li><a href="https://wa.me/255716787502" target="_blank">Tanzania: +255-716-787-502</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="auth-buttons auth-buttons-desk">
+                        <button class="login">Log in</button>
+                        <button class="signup">Sign up</button>
+                    </div>
+                    <div class="support-main">
+                        <div class="support-btn">
+                            <i class="fa-regular fa-phone"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="hamburger" onclick="toggleMenu()">
+                            <i class="fa-regular fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="top-row">
+                    <div class="logo">
+                        <img src="assets/logo.svg" alt="Sakura Motors" />
+                    </div>
+                    <div class="support-main">
+                        <div class="support-btn">
+                            <i class="fa-regular fa-phone"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="icons">
+                            <i class="fa-regular fa-xmark-large" onclick="toggleMenu()"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="mbl-bottom">
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">Stock</a></li>
+                        <li><a href="#">Company Profile</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Payment</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                    <div class="cont-info">
+                        <h1><i class="fa-brands fa-whatsapp"></i> Whatsapp:</h1>
+                        <p>
+                            Japan: <a href="https://wa.me/818068823553" target="_blank"><strong>+81-80-6882-3553</strong></a>
+                        </p>
+                        <p>
+                            Tanzania: <a href="https://wa.me/255716787502" target="_blank"><strong>+255-716-787-502</strong></a>
+                        </p>
+                    </div>
+
+                    <div class="auth-buttons">
+                        <a href="#" class="login">Log in</a>
+                        <a href="#" class="signup">Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="main-hero">
+                <div class="container">
+                    <div class="m-head">
+                        <h1>PRICE CALCULATOR</h1>
+                        <p>Please calculate the price based on your country's inspection and insurance regulations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vs-search-box">
+                <div>
+                    <form class="vs-search-controls">
+                        <div class="vs-filter">
+                            <div class="vs-filter-input">
+                                <div class="stock-flt-head">
+                                    <h3>Select country</h3>
+                                    <div class="vs-select-wrapper">
+                                        <select id="makeSelect" class="vs-select">
+                                            <option value="">Please select</option>
+                                            <option value="253">Zambia</option>
+                                            <option value="223">Tanzania</option>
+                                            <option value="238">Uganda</option>
+                                            <option value="55">D.R Congo</option>
+                                            <option value="254">Zimbabwe</option>
+                                            <option value="153">Mozambique</option>
+                                            <option value="135">Malawi</option>
+                                            <option value="214">Sudan</option>
+                                            <option value="118">Kenya</option>
+                                            <option value="30">Botswana</option>
+                                            <option value="37">Burundi</option>
+                                            <option value="2">Åland Islands</option>
+                                            <option value="3">Albania</option>
+                                            <option value="4">Algeria</option>
+                                            <option value="5">American Samoa</option>
+                                            <option value="6">Andorra</option>
+                                            <option value="7">Angola</option>
+                                            <option value="8">Anguilla</option>
+                                            <option value="9">Antarctica</option>
+                                            <option value="10">Antigua &amp; Barbuda</option>
+                                            <option value="11">Argentina</option>
+                                            <option value="12">Armenia</option>
+                                            <option value="13">Aruba</option>
+                                            <option value="14">Ascension Island</option>
+                                            <option value="15">Australia</option>
+                                            <option value="16">Austria</option>
+                                            <option value="17">Azerbaijan</option>
+                                            <option value="18">Bahamas</option>
+                                            <option value="19">Bahrain</option>
+                                            <option value="20">Bangladesh</option>
+                                            <option value="21">Barbados</option>
+                                            <option value="22">Belarus</option>
+                                            <option value="23">Belgium</option>
+                                            <option value="24">Belize</option>
+                                            <option value="25">Benin</option>
+                                            <option value="26">Bermuda</option>
+                                            <option value="27">Bhutan</option>
+                                            <option value="28">Bolivia</option>
+                                            <option value="29">Bosnia &amp; Herzegovina</option>
+                                            <option value="31">Brazil</option>
+                                            <option value="32">British Indian Ocean Territory</option>
+                                            <option value="33">British Virgin Islands</option>
+                                            <option value="34">Brunei</option>
+                                            <option value="35">Bulgaria</option>
+                                            <option value="36">Burkina Faso</option>
+                                            <option value="38">Cambodia</option>
+                                            <option value="39">Cameroon</option>
+                                            <option value="40">Canada</option>
+                                            <option value="41">Canary Islands</option>
+                                            <option value="42">Cape Verde</option>
+                                            <option value="43">Caribbean Netherlands</option>
+                                            <option value="44">Cayman Islands</option>
+                                            <option value="45">Central African Republic</option>
+                                            <option value="46">Ceuta &amp; Melilla</option>
+                                            <option value="47">Chad</option>
+                                            <option value="48">Chile</option>
+                                            <option value="49">China</option>
+                                            <!-- Add remaining options here up to -->
+                                            <option value="252">Yemen</option>
+                                        </select>
+                                        <i class="fas fa-chevron-down vs-chevron"></i>
+                                    </div>
+                                </div>
+                                <div class="stock-flt-head salaam-opt">
+                                    <h3>Select port</h3>
+                                    <div class="vs-select-wrapper inspection">
+                                        <select id="salaamSelect" class="vs-select">
+                                            <option value="">Any</option>
+                                            <option value="2" data-price="$17,879" data-subtitle="Cost & Insurance & Freight Fees">Dar es Salaam (C&F)</option>
+                                            <option value="3" data-price="$17,879" data-subtitle="Cost & Insurance & Freight Fees">Dar es Salaam (C&F)</option>
+                                            <option value="4" data-price="$17,879" data-subtitle="Cost & Insurance & Freight Fees">Dar es Salaam (C&F)</option>
+                                        </select>
+
+                                        <i class="fas fa-chevron-down vs-chevron"></i>
+                                    </div>
+                                </div>
+                                <div class="stock-flt-head">
+                                    <h3>Inspection</h3>
+                                    <div class="vs-select-wrapper inspection">
+                                        <select id="modelSelect" class="vs-select">
+                                            <option value="yes">Yes</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                        <i class="fas fa-chevron-down vs-chevron"></i>
+                                    </div>
+                                </div>
+                                <div class="stock-flt-head">
+                                    <h3>Insurance</h3>
+                                    <div class="vs-select-wrapper inspection">
+                                        <select id="gearSelect" class="vs-select">
+                                            <option value="yes">Yes</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                        <i class="fas fa-chevron-down vs-chevron"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="vs-search-btn"><i class="fa-regular fa-magnifying-glass"></i>Calculate</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="stock-main">
+                    <aside class="sidebar">
+                        <div class="search-box">
+                            <h4>Search Vehicles</h4>
+                            <form>
+                                <div class="vs-search">
+                                    <div class="vs-search-input">
+                                        <i class="fa-light fa-magnifying-glass"></i>
+                                        <input type="text" placeholder="Keywords" />
+                                    </div>
+                                </div>
+                                <button type="submit"><i class="fa-light fa-magnifying-glass"></i></button>
+                            </form>
+                            <small>*Stock No., Body Type, Chassis</small>
+                        </div>
+
+                        <form class="filters">
+                            <h4>Filters</h4>
+
+                            <div class="stock-flt-head">
+                                <h3>Price</h3>
+                                <div class="year-range">
+                                    <div class="vs-select-wrapper price-from">
+                                        <select id="filterPriceFrom" class="vs-select">
+                                            <option>From</option>
+                                            <option value="1000">$1,000</option>
+                                            <option value="5000">$5,000</option>
+                                        </select>
+                                        <i class="fas fa-chevron-down vs-chevron"></i>
+                                    </div>
+                                    <div class="year-right-border"></div>
+                                    <div class="vs-select-wrapper price-to">
+                                        <select id="filterPriceTo" class="vs-select">
+                                            <option>To</option>
+                                            <option value="10000">$10,000</option>
+                                            <option value="20000">$20,000</option>
+                                        </select>
+                                        <i class="fas fa-chevron-down vs-chevron"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stock-flt-head">
+                                <h3>Make</h3>
+                                <div class="vs-select-wrapper make">
+                                    <select id="filterMake" class="vs-select">
+                                        <option>Any</option>
+                                        <option value="toyota">Toyota</option>
+                                        <option value="honda">Honda</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down vs-chevron"></i>
+                                </div>
+                            </div>
+
+                            <div class="stock-flt-head">
+                                <h3>Model</h3>
+                                <div class="vs-select-wrapper model">
+                                    <select id="filterModel" class="vs-select">
+                                        <option>Any</option>
+                                        <option value="corolla">Corolla</option>
+                                        <option value="civic">Civic</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down vs-chevron"></i>
+                                </div>
+                            </div>
+
+                            <div class="stock-flt-head">
+                                <h3>Gear</h3>
+                                <div class="vs-select-wrapper gear">
+                                    <select id="filterGear" class="vs-select">
+                                        <option>Any</option>
+                                        <option value="auto">Automatic</option>
+                                        <option value="manual">Manual</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down vs-chevron"></i>
+                                </div>
+                            </div>
+
+                            <div class="stock-flt-head">
+                                <h3>Year</h3>
+                                <div class="year-range">
+                                    <div class="vs-select-wrapper year-min">
+                                        <select id="filterYearMin" class="vs-select">
+                                            <option>Min</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2018">2018</option>
+                                        </select>
+                                        <i class="fas fa-chevron-down vs-chevron"></i>
+                                    </div>
+                                    <div class="year-right-border"></div>
+                                    <div class="vs-select-wrapper year-max">
+                                        <select id="filterYearMax" class="vs-select">
+                                            <option>Max</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2023">2023</option>
+                                        </select>
+                                        <i class="fas fa-chevron-down vs-chevron"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-border"></div>
+                            <button type="submit" class="apply-btn">Aply Filters</button>
+                        </form>
+
+                        <div class="search-type">
+                            <h4>Search by type</h4>
+                            <ul id="vehicle-list"></ul>
+                        </div>
+                        <div class="search-maker">
+                            <h4>Search by maker</h4>
+                            <ul id="maker-list"></ul>
+                        </div>
+                    </aside>
+                    <div class="stock-right">
+                        <h1 class="main-heading">List of Vehicles</h1>
+                        <div class="item-count-main">
+                            <h1>
+                                <strong>1 306</strong>
+                                Results
+                            </h1>
+                            <div class="stock-flt-head">
+                                <h3>Sort by:</h3>
+                                <div class="vs-select-wrapper inspection">
+                                    <select id="sortSelect" class="vs-select">
+                                        <option value="new arivals">New Arivals</option>
+                                        <option value="price low to high">Price Low to High</option>
+                                        <option value="price high to low">Price High to Low</option>
+                                        <option value="year new to old">Year New to Old</option>
+                                        <option value="year new to old">Year New to Old</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down vs-chevron"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="car-listings-container"></div>
+                        <a href="#" class="view-more-opt">View More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="social-link-main">
+                    <a href="#" class="social-link">
+                        <img src="assets/facebook.svg" alt="facebook" />
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="assets/yt.svg" alt="yt" />
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="assets/insta.svg" alt="insta" />
+                    </a>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section about-us">
+                    <div class="about-us-contact">
+                        <a href="index.html" class="footer-logo">
+                            <img src="assets/logo.svg" alt="Sakura Motors Footer Logo" />
+                        </a>
+                        <div class="contact-info-footer">
+                            <i class="fa-regular fa-phone"></i>
+                            <p>+81-29-868-3668</p>
+                        </div>
+                    </div>
+                    <p>
+                        We believe in offering you the best customer service possible. We have been in the vehicle trading business for over 15 years in Japan. Our new company, established in 2011, is even better equipped to provide you
+                        with your dream vehicle.
+                    </p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-section helpful-links">
+                        <h3>Helpful Links</h3>
+                        <ul>
+                            <li><a href="#" class="active-ft">Home</a></li>
+                            <li><a href="#">Stock</a></li>
+                            <li><a href="#">About Company</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section contact-details">
+                        <h3>Contact</h3>
+                        <p><strong>Email:</strong> info@sakuramotors.com</p>
+                        <p><strong>Phone Office:</strong><span> +81-29-868-3668</span></p>
+                        <p><strong>Phone Mobile:</strong><span> +81-90-9945-6908, +81-90-9345-1234</span></p>
+                        <p><strong>Fax:</strong><span> +81-29-868-3669</span></p>
+                    </div>
+                    <div class="footer-section visit-us">
+                        <h3>Visit Us</h3>
+                        <p><strong>Showroom:</strong> Ibaraki Ken, Tsukuba Shi, Gakuen Minami, 3 - 48 - 48, 〒 305 - 0818</p>
+                        <p><strong>Yard:</strong> Ibaraki Ken, Banda shi, Matate, 1086-1, 〒 306 - 0605</p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 All rights reserved</p>
+                <a href="#" class="back-to-top">Back to the top <i class="fas fa-chevron-up"></i></a>
+            </div>
+        </footer>
+        <!-- jQuery + Select2 -->
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script src="js/stock.js"></script>
+        <script src="js/header.js"></script>
+    </body>
+</html>
