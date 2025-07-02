@@ -22,6 +22,8 @@ header {
     height: 104px;
     padding: 20px 0;
     background: var(--white);
+        box-shadow: 0px 4px 8px 0px #a5a5a529;
+
 }
 .logo {
     width: 154px;

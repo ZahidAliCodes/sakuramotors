@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/header.css" />
         <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/details.css" />
         <!-- link offline font fontawesome pro -->
         <link rel="stylesheet" href="icon/css/all.min.css" />
         <link rel="stylesheet" href="icon/css/sharp-solid.min.css" />
@@ -29,7 +30,7 @@
                         </div>
                         <nav class="nav-links">
                             <ul>
-                                <li><a href="index.html" >Home</a></li>
+                                <li><a href="index.html">Home</a></li>
                                 <li><a href="stock.html" class="active">Stock</a></li>
                                 <li class="dropdown">
                                     <a href="#">About Us <i class="fas fa-chevron-down"></i></a>
@@ -86,7 +87,7 @@
                 </div>
                 <div class="mbl-bottom">
                     <ul>
-                        <li><a href="index.html" >Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="details.html" class="active">Stock</a></li>
                         <li><a href="#">Company Profile</a></li>
                         <li><a href="#">Gallery</a></li>
@@ -111,7 +112,195 @@
                 </div>
             </div>
         </header>
-     
+        <section>
+            <div class="container">
+                <div class="stock-main">
+                    <div class="stock-left">
+                        <div class="stock-nav">
+                            <ul>
+                                <li class="active"><a href="stock.html">Stock/</a></li>
+                                <li><a href="#">Heavy Truck/</a></li>
+                                <li><a href="#">Nissan Civilian</a></li>
+                            </ul>
+                        </div>
+                        <div class="main-price">
+                            <h1>2004/2 Nissan Civilian</h1>
+                            <ul>
+                                <li>Price (FOB):</li>
+                                <li>$7,879</li>
+                                <li>$8,409</li>
+                            </ul>
+                        </div>
+                        <div id="imageData" style="display: none;">
+                            <div data-type="image" data-src="assets/card-img.jpg"></div>
+                            <div data-type="image" data-src="assets/card-img.jpg"></div>
+                            <div data-type="video" data-src="https://www.w3schools.com/html/mov_bbb.mp4" data-poster="https://placehold.co/800x480/FFDDC1/FF6F61?text=Video+Thumbnail"></div>
+                            <div data-type="image" data-src="assets/card-img.jpg"></div>
+                            <div data-type="image" data-src="assets/card-img.jpg"></div>
+                            <div data-type="image" data-src="assets/card-img.jpg"></div>
+                            <div data-type="image" data-src="assets/card-img.jpg"></div>
+                            <div data-type="image" data-src="assets/card-img.jpg"></div>
+                            <div data-type="image" data-src="assets/card-img.jpg"></div>
+                            <div data-type="image" data-src="assets/card-img.jpg"></div>
+                            <div data-type="image" data-src="assets/card-img.jpg"></div>
+                            <div data-type="image" data-src="assets/card-img.jpg"></div>
+                            <div data-type="image" data-src="assets/card-img.jpg"></div>
+                        </div>
+
+                        <div class="image-viewer-container">
+                            <div class="main-image-section">
+                                <img id="mainImage" class="main-media" src="" alt="Main Media" />
+                                <video id="mainVideo" class="main-media" src="" controls muted playsinline></video>
+
+                                <button class="nav-button left" id="prevButton"><i class="fas fa-chevron-left"></i></button>
+                                <button class="nav-button right" id="nextButton"><i class="fas fa-chevron-right"></i></button>
+                                <div class="overlay-tags">
+                                    <span class="tag">MP3 interface</span>
+                                    <span class="tag">ABS</span>
+                                </div>
+                                <button class="download-button" id="mainDownloadBtn">
+                                    Download all images
+                                </button>
+                            </div>
+
+                            <div class="thumbnail-section">
+                                <div class="thumbnail-carousel" id="thumbnailCarousel"></div>
+                                <div class="carousel-nav-arrows">
+                                    <button class="carousel-arrow" id="carouselPrev"><i class="fas fa-chevron-left"></i></button>
+                                    <div class="pagination-dots" id="paginationDots"></div>
+                                    <button class="carousel-arrow" id="carouselNext"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="overlaySlider" class="overlay-slider">
+                            <button id="overlayPrevBtn" class="nav-arrow"><i class="fas fa-chevron-left"></i></button>
+                            <button id="overlayNextBtn" class="nav-arrow"><i class="fas fa-chevron-right"></i></button>
+
+                            <div class="gallery">
+                                <div class="gallery-header">
+                                    <div class="gallery-header-left">
+                                        <a href="#" id="closeOverlay" class="close-overlay-btn"> <i class="fa-regular fa-arrow-left"></i> Back to details </a>
+                                    </div>
+                                    <div class="gallery-header-right">
+                                        <button id="overlayShareIcon" class="icon-button share-icon-btn" title="Share Media">
+                                            <i class="fa-regular fa-share-nodes"></i>
+                                        </button>
+                                        <button id="overlayDownloadIcon" class="icon-button download-icon-btn" title="Download All Images">
+                                            <i class="fa-regular fa-down-to-bracket"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="main-image-container">
+                                    <img id="overlayMainImage" class="overlay-main-media" src="" alt="Overlay Main Media" />
+                                    <video id="overlayMainVideo" class="overlay-main-media" src="" controls muted playsinline></video>
+                                    <span id="overlayImageCounter"></span>
+                                </div>
+                                <div id="overlayThumbnails" class="thumbnails"></div>
+
+                                <div class="thumbnails-wrapper">
+                                    <button id="thumbsPrev" class="thumb-nav"><i class="fas fa-chevron-left"></i></button>
+
+                                    <div class="pagination" id="overlayPaginationDots"></div>
+                                    <button id="thumbsNext" class="thumb-nav"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h2 class="box-title">
+                                Vehicle details <span class="share-btn"><i class="fa-regular fa-share-nodes"></i> Share</span>
+                            </h2>
+                            <div class="details-list">
+                                <ul>
+                                    <li>Stock no: <strong>9067</strong></li>
+                                    <li>Transmission:<strong>Manual</strong></li>
+                                    <li>Engine Cc: <strong>8200</strong></li>
+                                    <li>Model Code: <strong>KK-FK71GJ</strong></li>
+                                    <li>Body Type: <strong> Heavy Truck</strong></li>
+
+                                    <li>Steering: <strong>Right</strong></li>
+                                    <li>Year: <strong>2004/2</strong></li>
+                                    <li>Engine Model: <strong> 6M61</strong></li>
+                                    <li>Seating: <strong> 3</strong></li>
+                                </ul>
+                                <ul>
+                                    <li>Fuel Type: <strong>Diesel</strong></li>
+                                    <li>Drive Type: <strong> 2 Wheels</strong></li>
+                                    <li>Doors: <strong>2</strong></li>
+
+                                    <li>Chassis: <strong>FK71GJ-765820</strong></li>
+                                    <li>Length (Cm): <strong>890</strong></li>
+                                    <li>Height (Cm): <strong>350</strong></li>
+                                    <li>Width (Cm): <strong>230</strong></li>
+                                    <li>Mileage: <strong>490,000 (km)</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h2 class="box-title">
+                                Featured options <span class="share-btn"><i class="fa-regular fa-share-nodes"></i> Share</span>
+                            </h2>
+                            <ul class="features-list">
+                                <li class="highlight">ABS</li>
+                                <li>Air bag</li>
+                                <li class="highlight">Auto Door</li>
+                                <li>Backup Camera</li>
+                                <li class="highlight">CD player</li>
+                                <li>Parking sensors</li>
+                                <li class="highlight">MP3 interface</li>
+                                <li>Power Steering</li>
+                                <li class="highlight">Power Mirrors</li>
+                                <li>Power Window</li>
+                                <li>Radio</li>
+                                <li>Remote Key</li>
+                                <li>AC</li>
+                                <li>Alloy wheels</li>
+                                <li>Back Camera</li>
+                                <li>Bluetooth</li>
+                                <li>DVD</li>
+                                <li>Leather Seat</li>
+                                <li>Navigation</li>
+                                <li>Power Locks</li>
+                                <li>Power Seat</li>
+                                <li>Power Window</li>
+                                <li>Rear Spoiler</li>
+                                <li>Sun Roof</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="stock-right">
+                        <div class="quote-main">
+                            <a href="#">Get a price quote now</a>
+                            <button class="btn-share" onclick="copyLink()"><i class="fa-regular fa-share-nodes"></i> Share</button>
+                        </div>
+                        <div class="box">
+                            <h2>Price calculator</h2>
+                        </div>
+                        <div class="box">
+                            <h2>Get Inquiry</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="social-link-main">
+                    <a href="#" class="social-link">
+                        <img src="assets/facebook.svg" alt="facebook">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="assets/yt.svg" alt="yt">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="assets/insta.svg" alt="insta">
+                    </a>
+                </div>
+            </div>
+        </section>
         <footer class="footer">
             <div class="footer-container">
                 <div class="footer-section about-us">
@@ -159,8 +348,11 @@
                 <a href="#" class="back-to-top">Back to the top <i class="fas fa-chevron-up"></i></a>
             </div>
         </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <script src="js/header.js"></script>
+        <script src="js/details.js"></script>
     </body>
 </html>
