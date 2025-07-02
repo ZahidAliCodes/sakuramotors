@@ -126,10 +126,11 @@ header {
     width: 76px;
     height: 44px;
     gap: 8px;
-    padding: 10px 16px;
+    padding: 10px 0;
     border-radius: var(--border-radius);
     font-weight: 600;
     cursor: pointer;
+    text-align: center;
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
 }
@@ -148,6 +149,7 @@ header {
     border-radius: var(--border-radius);
     cursor: pointer;
     font-weight: 700;
+    text-align: center;
      transition: background-color 0.3s ease, color 0.3s ease;
 }
 .auth-buttons .signup:hover{
@@ -160,6 +162,7 @@ header {
 .icons,
 .hamburger {
     font-size: 26px;
+    color: var(--text-color);
 }
 .mobile-menu {
     display: none;
@@ -273,8 +276,9 @@ header {
     }
     .mbl-bottom .auth-buttons {
         padding: 10px 0;
+        
     }
-    .mbl-bottom .auth-buttons button {
+    .mbl-bottom .auth-buttons a {
         width: 50%;
     }
     

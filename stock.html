@@ -54,8 +54,8 @@
                     </div>
 
                     <div class="auth-buttons auth-buttons-desk">
-                        <button class="login">Log in</button>
-                        <button class="signup">Sign up</button>
+                        <a href="#" class="login">Log in</a>
+                        <a href="#" class="signup">Sign up</button>
                     </div>
                     <div class="support-main">
                         <div class="support-btn">
@@ -87,8 +87,8 @@
                 </div>
                 <div class="mbl-bottom">
                     <ul>
-                        <li><a href="#" class="active">Home</a></li>
-                        <li><a href="#">Stock</a></li>
+                        <li><a href="index.html" >Home</a></li>
+                        <li><a href="stock.html" class="active">Stock</a></li>
                         <li><a href="#">Company Profile</a></li>
                         <li><a href="#">Gallery</a></li>
                         <li><a href="#">Payment</a></li>
@@ -207,7 +207,7 @@
                                         <i class="fas fa-chevron-down vs-chevron"></i>
                                     </div>
                                 </div>
-                                <div class="stock-flt-head">
+                                <div class="stock-flt-head hide">
                                     <h3>Inspection</h3>
                                     <div class="vs-select-wrapper inspection">
                                         <select id="modelSelect" class="vs-select">
@@ -217,7 +217,7 @@
                                         <i class="fas fa-chevron-down vs-chevron"></i>
                                     </div>
                                 </div>
-                                <div class="stock-flt-head">
+                                <div class="stock-flt-head hide">
                                     <h3>Insurance</h3>
                                     <div class="vs-select-wrapper inspection">
                                         <select id="gearSelect" class="vs-select">
@@ -227,6 +227,30 @@
                                         <i class="fas fa-chevron-down vs-chevron"></i>
                                     </div>
                                 </div>
+                                <div class="toggle-container">
+                                    <div class="toggle-row">
+                                        <span class="label">Inspection</span>
+                                        <div class="button-group">
+                                            <input type="radio" id="inspectionNo" name="inspection" value="no" checked />
+                                            <label for="inspectionNo" class="toggle-button">No</label>
+                                            <input type="radio" id="inspectionYes" name="inspection" value="yes" />
+                                            <label for="inspectionYes" class="toggle-button yes-button">Yes</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="toggle-row">
+                                        <span class="label">Insurance</span>
+                                        <div class="button-group">
+                                            <input type="radio" id="insuranceNo" name="insurance" value="no" checked />
+                                            <label for="insuranceNo" class="toggle-button">No</label>
+                                            <input type="radio" id="insuranceYes" name="insurance" value="yes" />
+                                            <label for="insuranceYes" class="toggle-button yes-button">Yes</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
                             </div>
                         </div>
 
@@ -235,6 +259,7 @@
                 </div>
             </div>
         </section>
+
         <section>
             <div class="container">
                 <div class="stock-main">
@@ -343,13 +368,281 @@
 
                         <div class="search-type">
                             <h4>Search by type</h4>
-                            <ul id="vehicle-list"></ul>
+                            <ul>
+                                <li>
+                                    <a href="large-bus.html"><img src="assets/large-bus.svg" alt="Large Bus icon" /> Large Bus (2)</a>
+                                </li>
+                                <li>
+                                    <a href="mini-bus.html"><img src="assets/mini-bus.svg" alt="Mini Bus icon" /> Mini Bus (2)</a>
+                                </li>
+                                <li>
+                                    <a href="heavy-truck.html"><img src="assets/heavy-truck.svg" alt="Heavy Truck icon" /> Heavy Truck (2)</a>
+                                </li>
+                                <li>
+                                    <a href="light-truck.html"><img src="assets/light-truck.svg" alt="Light Truck icon" /> Light Truck (2)</a>
+                                </li>
+                                <li>
+                                    <a href="van.html"><img src="assets/van.svg" alt="Van icon" /> Van (2)</a>
+                                </li>
+                                <li>
+                                    <a href="mini-van.html"><img src="assets/mini-van.svg" alt="Mini Van icon" /> Mini Van (2)</a>
+                                </li>
+                                <li>
+                                    <a href="suv.html"><img src="assets/suv.svg" alt="Suv icon" /> Suv (2)</a>
+                                </li>
+                                <li>
+                                    <a href="sedan.html"><img src="assets/sedan.svg" alt="Sedan icon" /> Sedan (2)</a>
+                                </li>
+                                <li>
+                                    <a href="wagon.html"><img src="assets/wagon.svg" alt="Wagon icon" /> Wagon (2)</a>
+                                </li>
+                                <li>
+                                    <a href="hatchback.html"><img src="assets/hatchback.svg" alt="Hatchback icon" /> Hatchback (2)</a>
+                                </li>
+                                <li>
+                                    <a href="pick-up.html"><img src="assets/pick-up.svg" alt="Pick Up icon" /> Pick Up (2)</a>
+                                </li>
+                                <li>
+                                    <a href="machinery.html"><img src="assets/machinery.svg" alt="Machinery icon" /> Machinery (2)</a>
+                                </li>
+                                <li>
+                                    <a href="large-bus-alt.html"><img src="assets/mini-bus.svg" alt="Large bus icon" /> Large bus (2)</a>
+                                </li>
+                            </ul>
                         </div>
+
                         <div class="search-maker">
                             <h4>Search by maker</h4>
-                            <ul id="maker-list"></ul>
+                            <ul>
+                                <li>
+                                    <a href="tayota.html"><img src="assets/tayota.svg" alt="Tayota icon" /> Tayota (9)</a>
+                                </li>
+                                <li>
+                                    <a href="mitsubishi.html"><img src="assets/mitsubishi.svg" alt="Mitsubishi icon" /> Mitsubishi (2)</a>
+                                </li>
+                                <li>
+                                    <a href="nissan.html"><img src="assets/nissan.svg" alt="Nissan icon" /> Nissan (2)</a>
+                                </li>
+                                <li>
+                                    <a href="isuzu.html"><img src="assets/isuzu.svg" alt="Isuzu icon" /> Isuzu (2)</a>
+                                </li>
+                                <li>
+                                    <a href="hino.html"><img src="assets/hino.svg" alt="Hino icon" /> Hino (2)</a>
+                                </li>
+                                <li>
+                                    <a href="suzuki.html"><img src="assets/suzuki.svg" alt="Suzuki icon" /> Suzuki (2)</a>
+                                </li>
+                                <li>
+                                    <a href="mercedes-benz.html"><img src="assets/benz.svg" alt="Mercedes - Benz icon" /> Mercedes - Benz (2)</a>
+                                </li>
+                                <li>
+                                    <a href="volvo.html"><img src="assets/volvo.svg" alt="Volvo icon" /> Volvo (2)</a>
+                                </li>
+                                <li>
+                                    <a href="bmw.html"><img src="assets/bmw.svg" alt="BMW icon" /> BMW (2)</a>
+                                </li>
+                                <li>
+                                    <a href="ford.html"><img src="assets/ford.svg" alt="Ford icon" /> Ford (2)</a>
+                                </li>
+                                <li>
+                                    <a href="honda.html"><img src="assets/honda.svg" alt="Honda icon" /> Honda (2)</a>
+                                </li>
+                                <li>
+                                    <a href="mazda.html"><img src="assets/mazda.svg" alt="Mazda icon" /> Mazda (2)</a>
+                                </li>
+                                <li>
+                                    <a href="tayota-alt.html"><img src="assets/tayota.svg" alt="Tayota icon" /> Tayota (2)</a>
+                                </li>
+                            </ul>
                         </div>
                     </aside>
+                    <div id="moreOptions">
+                            <section >
+            <div class="container search-by">
+                <div class="tab-button-group">
+                    <button id="searchByTypeBtn" class="tab-button active">Search By Type</button>
+                    <button id="searchByMakeBtn" class="tab-button">Search By Make</button>
+                </div>
+
+                <div class="navigation" style="position: relative; display: flex; align-items: center;">
+                    <div id="leftArrow" class="nav-arrow left hidden">
+                        <i class="fa-regular fa-angle-left"></i>
+                    </div>
+                    <div id="gridContainer" class="grid-wrapper">
+                        <!-- Vehicle Types -->
+                        <div class="vehicle-types">
+                            <a href="large-bus.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Large Bus (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/large-bus.svg" class="vehicle-type-image" alt="Large Bus" />
+                            </a>
+                            <a href="mini-bus.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Mini Bus (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/mini-bus.svg" class="vehicle-type-image" alt="Mini Bus" />
+                            </a>
+                            <a href="heavy-truck.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Heavy Truck (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/heavy-truck.svg" class="vehicle-type-image" alt="Heavy Truck" />
+                            </a>
+                            <a href="light-truck.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Light Truck (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/light-truck.svg" class="vehicle-type-image" alt="Light Truck" />
+                            </a>
+                            <a href="van.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Van (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/van.svg" class="vehicle-type-image" alt="Van" />
+                            </a>
+                            <a href="mini-van.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Mini Van (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/mini-van.svg" class="vehicle-type-image" alt="Mini Van" />
+                            </a>
+                            <a href="suv.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Suv (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/suv.svg" class="vehicle-type-image" alt="Suv" />
+                            </a>
+                            <a href="sedan.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Sedan (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/sedan.svg" class="vehicle-type-image" alt="Sedan" />
+                            </a>
+                            <a href="wagon.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Wagon (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/wagon.svg" class="vehicle-type-image" alt="Wagon" />
+                            </a>
+                            <a href="hatchback.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Hatchback (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/hatchback.svg" class="vehicle-type-image" alt="Hatchback" />
+                            </a>
+                            <a href="pick-up.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Pick Up (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/pick-up.svg" class="vehicle-type-image" alt="Pick Up" />
+                            </a>
+                            <a href="machinery.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Machinery (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/machinery.svg" class="vehicle-type-image" alt="Machinery" />
+                            </a>
+                            <a href="large-bus-alt.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Large bus (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/mini-bus.svg" class="vehicle-type-image" alt="Large bus" />
+                            </a>
+                        </div>
+
+                        <!-- Vehicle Makes -->
+                        <div class="vehicle-makes">
+                            <a href="tayota.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Tayota (9) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/tayota.svg" class="vehicle-make-image" alt="Tayota" />
+                            </a>
+                            <a href="mitsubishi.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Mitsubishi (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/mitsubishi.svg" class="vehicle-make-image" alt="Mitsubishi" />
+                            </a>
+                            <a href="nissan.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Nissan (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/nissan.svg" class="vehicle-make-image" alt="Nissan" />
+                            </a>
+                            <a href="isuzu.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Isuzu (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/isuzu.svg" class="vehicle-make-image" alt="Isuzu" />
+                            </a>
+                            <a href="hino.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Hino (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/hino.svg" class="vehicle-make-image" alt="Hino" />
+                            </a>
+                            <a href="suzuki.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Suzuki (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/suzuki.svg" class="vehicle-make-image" alt="Suzuki" />
+                            </a>
+                            <a href="mercedes-benz.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Mercedes - Benz (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/benz.svg" class="vehicle-make-image" alt="Mercedes - Benz" />
+                            </a>
+                            <a href="volvo.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Volvo (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/volvo.svg" class="vehicle-make-image" alt="Volvo" />
+                            </a>
+                            <a href="bmw.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    BMW (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/bmw.svg" class="vehicle-make-image" alt="BMW" />
+                            </a>
+                            <a href="ford.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Ford (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/ford.svg" class="vehicle-make-image" alt="Ford" />
+                            </a>
+                            <a href="honda.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Honda (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/honda.svg" class="vehicle-make-image" alt="Honda" />
+                            </a>
+                            <a href="mazda.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Mazda (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/mazda.svg" class="vehicle-make-image" alt="Mazda" />
+                            </a>
+                            <a href="tayota-alt.html" class="grid-item">
+                                <div class="grid-item-title">
+                                    Tayota (2) <span class="arrow-icon"><i class="fa-regular fa-arrow-right"></i></span>
+                                </div>
+                                <img src="assets/tayota.svg" class="vehicle-make-image" alt="Tayota" />
+                            </a>
+                        </div>
+                    </div>
+                    <div id="rightArrow" class="nav-arrow right">
+                        <i class="fa-regular fa-angle-right"></i>
+                    </div>
+                </div>
+
+                <div id="paginationDots" class="pagination-dots"></div>
+            </div>
+        </section>
+                    </div>
+                    <button id="toggleBtn">View more search options</button>
                     <div class="stock-right">
                         <h1 class="main-heading">List of Vehicles</h1>
                         <div class="item-count-main">
@@ -371,7 +664,598 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="car-listings-container"></div>
+                        <div id="car-listings-container">
+                            <!-- Car 1 -->
+                            <div class="car-card card-shadow">
+                                <a href="details.html" class="image-section">
+                                    <img src="assets/card-img.jpg" alt="Nissan Civilian" />
+                                    <div class="top-right-buttons">
+                                        <button class="image-action-btn">MP3 interface</button>
+                                        <button class="image-action-btn">ABS</button>
+                                    </div>
+                                </a>
+                                <div class="details-section">
+                                    <div>
+                                        <h2>Nissan Civilian</h2>
+                                        <div class="details-grid">
+                                            <div class="details-grid-left">
+                                                <p><span class="font-semibold">Stock no:</span> <b>9067</b></p>
+                                            <p><span class="font-semibold">Gear:</span> <b>Manual</b></p>
+                                            <p><span class="font-semibold">Engine CC:</span> <b>1800</b></p>
+                                            <p><span class="font-semibold">Year:</span> <b>2005/1</b></p>
+                                            </div>
+                                            <div class="details-grid-right">
+                                            <p><span class="font-semibold">Engine model:</span> <b>7K</b></p>
+                                            <p><span class="font-semibold">Seating:</span> <b>8</b></p>
+                                            <p><span class="font-semibold">Model:</span> <b>GK-KM70</b></p>
+                                            <p><span class="font-semibold">Body Type:</span> <b>Light Truck</b></p>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="features-container">
+                                            <span class="feature-badge">ABS</span>
+                                            <span class="feature-badge">Auto Door</span>
+                                            <span class="feature-badge">CD player</span>
+                                            <span class="feature-badge">MP3</span>
+                                            <span class="feature-badge">+2 more</span>
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+                                   <div class="price-inquire-section">
+                                        <div class="price-inquire-iner">
+                                            <p class="main-price price-red">$7,879 <span class="price-fob-text">Price (FOB)</span></p>
+                                            <p class="description-text">Inspection & Insurance Final Country</p>
+                                        </div>
+                                        <p class="final-price-text">Final Price <span class="price-red">-</span></p>
+                                        <div class="inquire-button-container">
+                                            <a href="details.html" class="inquire-button">Inquire</a>
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <!-- Car 2 (with discount & green price & extra description) -->
+                            <div class="car-card card-shadow">
+                                <a href="details.html" class="image-section">
+                                    <img src="assets/card-img.jpg" alt="Nissan Civilian" />
+                                    <div class="top-right-buttons">
+                                        <button class="image-action-btn">MP3 interface</button>
+                                        <button class="image-action-btn">ABS</button>
+                                    </div>
+                                </a>
+                                <div class="details-section">
+                                    <div class="border-center"></div>
+                                    <div>
+                                        <h2>Nissan Civilian</h2>
+                                        <div class="details-grid">
+                                            <div class="details-grid-left">
+                                                <p><span class="font-semibold">Stock no:</span> <b>9067</b></p>
+                                            <p><span class="font-semibold">Gear:</span> <b>Manual</b></p>
+                                            <p><span class="font-semibold">Engine CC:</span> <b>1800</b></p>
+                                            <p><span class="font-semibold">Year:</span> <b>2005/1</b></p>
+                                            </div>
+                                            <div class="details-grid-right">
+                                            <p><span class="font-semibold">Engine model:</span> <b>7K</b></p>
+                                            <p><span class="font-semibold">Seating:</span> <b>8</b></p>
+                                            <p><span class="font-semibold">Model:</span> <b>GK-KM70</b></p>
+                                            <p><span class="font-semibold">Body Type:</span> <b>Light Truck</b></p>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="features-container">
+                                            <span class="feature-badge">ABS</span>
+                                            <span class="feature-badge">Auto Door</span>
+                                            <span class="feature-badge">CD player</span>
+                                            <span class="feature-badge">MP3</span>
+                                            <span class="feature-badge">+2 more</span>
+                                        </div>
+                                    </div>
+                              
+                                </div>
+                                      <div class="price-inquire-section">
+                                        <div class="price-inquire-iner">
+                                            <p class="original-price">was $8,489</p>
+                                            <p class="main-price price-green"><i class="fa-solid fa-circle-arrow-down-right"></i> $7,879 <span class="price-fob-text">Price (FOB)</span></p>
+                                            <p class="description-text description-red">(C&amp;F)</p>
+                                            <p class="description-text description-red">Dar Es Salaam</p>
+                                        </div>
+                                        <p class="final-price-text">Final Price <span class="price-red">$7,879</span></p>
+                                        <div class="inquire-button-container">
+                                            <a href="details.html" class="inquire-button">Inquire</a>
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <!-- Car 4 (Reserved) -->
+                            <div class="car-card card-shadow">
+                                <a href="details.html" class="image-section">
+                                    <img src="assets/card-img.jpg" alt="Nissan Civilian" />
+                                    <div class="top-right-buttons">
+                                        <button class="image-action-btn">MP3 interface</button>
+                                        <button class="image-action-btn">ABS</button>
+                                    </div>
+                                    <button class="top-left-reserved-btn">Reserved</button>
+                                    <div class="reserved-image-overlay"></div>
+                                </a>
+                                <div class="details-section">
+                                    <div class="border-center"></div>
+                                    <div>
+                                        <h2>Nissan Civilian</h2>
+                                         <div class="details-grid">
+                                            <div class="details-grid-left">
+                                                <p><span class="font-semibold">Stock no:</span> <b>9067</b></p>
+                                            <p><span class="font-semibold">Gear:</span> <b>Manual</b></p>
+                                            <p><span class="font-semibold">Engine CC:</span> <b>1800</b></p>
+                                            <p><span class="font-semibold">Year:</span> <b>2005/1</b></p>
+                                            </div>
+                                            <div class="details-grid-right">
+                                            <p><span class="font-semibold">Engine model:</span> <b>7K</b></p>
+                                            <p><span class="font-semibold">Seating:</span> <b>8</b></p>
+                                            <p><span class="font-semibold">Model:</span> <b>GK-KM70</b></p>
+                                            <p><span class="font-semibold">Body Type:</span> <b>Light Truck</b></p>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="features-container">
+                                            <span class="feature-badge">ABS</span>
+                                            <span class="feature-badge">Auto Door</span>
+                                            <span class="feature-badge">CD player</span>
+                                            <span class="feature-badge">MP3</span>
+                                            <span class="feature-badge">+2 more</span>
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+                                   <div class="price-inquire-section">
+                                        <div class="price-inquire-iner">
+                                            <p class="main-price price-red">$7,879 <span class="price-fob-text">Price (FOB)</span></p>
+                                            <p class="description-text description-red">(C&amp;F)</p>
+                                            <p class="description-text description-red">Dar Es Salaam</p>
+                                        </div>
+                                        <p class="final-price-text">Final Price <span class="price-red">$7,879</span></p>
+                                        <div class="inquire-button-container">
+                                            <a href="details.html" class="inquire-button">Inquire</a>
+                                        </div>
+                                    </div>
+                            </div>
+                      <div class="car-card card-shadow">
+                                <a href="details.html" class="image-section">
+                                    <img src="assets/card-img.jpg" alt="Nissan Civilian" />
+                                    <div class="top-right-buttons">
+                                        <button class="image-action-btn">MP3 interface</button>
+                                        <button class="image-action-btn">ABS</button>
+                                    </div>
+                                </a>
+                                <div class="details-section">
+                                    <div>
+                                        <h2>Nissan Civilian</h2>
+                                        <div class="details-grid">
+                                            <div class="details-grid-left">
+                                                <p><span class="font-semibold">Stock no:</span> <b>9067</b></p>
+                                            <p><span class="font-semibold">Gear:</span> <b>Manual</b></p>
+                                            <p><span class="font-semibold">Engine CC:</span> <b>1800</b></p>
+                                            <p><span class="font-semibold">Year:</span> <b>2005/1</b></p>
+                                            </div>
+                                            <div class="details-grid-right">
+                                            <p><span class="font-semibold">Engine model:</span> <b>7K</b></p>
+                                            <p><span class="font-semibold">Seating:</span> <b>8</b></p>
+                                            <p><span class="font-semibold">Model:</span> <b>GK-KM70</b></p>
+                                            <p><span class="font-semibold">Body Type:</span> <b>Light Truck</b></p>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="features-container">
+                                            <span class="feature-badge">ABS</span>
+                                            <span class="feature-badge">Auto Door</span>
+                                            <span class="feature-badge">CD player</span>
+                                            <span class="feature-badge">MP3</span>
+                                            <span class="feature-badge">+2 more</span>
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+                                   <div class="price-inquire-section">
+                                        <div class="price-inquire-iner">
+                                            <p class="main-price price-red">$7,879 <span class="price-fob-text">Price (FOB)</span></p>
+                                            <p class="description-text">Inspection & Insurance Final Country</p>
+                                        </div>
+                                        <p class="final-price-text">Final Price <span class="price-red">-</span></p>
+                                        <div class="inquire-button-container">
+                                            <a href="details.html" class="inquire-button">Inquire</a>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="car-card card-shadow">
+                                <a href="details.html" class="image-section">
+                                    <img src="assets/card-img.jpg" alt="Nissan Civilian" />
+                                    <div class="top-right-buttons">
+                                        <button class="image-action-btn">MP3 interface</button>
+                                        <button class="image-action-btn">ABS</button>
+                                    </div>
+                                </a>
+                                <div class="details-section">
+                                    <div>
+                                        <h2>Nissan Civilian</h2>
+                                        <div class="details-grid">
+                                            <div class="details-grid-left">
+                                                <p><span class="font-semibold">Stock no:</span> <b>9067</b></p>
+                                            <p><span class="font-semibold">Gear:</span> <b>Manual</b></p>
+                                            <p><span class="font-semibold">Engine CC:</span> <b>1800</b></p>
+                                            <p><span class="font-semibold">Year:</span> <b>2005/1</b></p>
+                                            </div>
+                                            <div class="details-grid-right">
+                                            <p><span class="font-semibold">Engine model:</span> <b>7K</b></p>
+                                            <p><span class="font-semibold">Seating:</span> <b>8</b></p>
+                                            <p><span class="font-semibold">Model:</span> <b>GK-KM70</b></p>
+                                            <p><span class="font-semibold">Body Type:</span> <b>Light Truck</b></p>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="features-container">
+                                            <span class="feature-badge">ABS</span>
+                                            <span class="feature-badge">Auto Door</span>
+                                            <span class="feature-badge">CD player</span>
+                                            <span class="feature-badge">MP3</span>
+                                            <span class="feature-badge">+2 more</span>
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+                                   <div class="price-inquire-section">
+                                        <div class="price-inquire-iner">
+                                            <p class="main-price price-red">$7,879 <span class="price-fob-text">Price (FOB)</span></p>
+                                            <p class="description-text">Inspection & Insurance Final Country</p>
+                                        </div>
+                                        <p class="final-price-text">Final Price <span class="price-red">-</span></p>
+                                        <div class="inquire-button-container">
+                                            <a href="details.html" class="inquire-button">Inquire</a>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="car-card card-shadow">
+                                <a href="details.html" class="image-section">
+                                    <img src="assets/card-img.jpg" alt="Nissan Civilian" />
+                                    <div class="top-right-buttons">
+                                        <button class="image-action-btn">MP3 interface</button>
+                                        <button class="image-action-btn">ABS</button>
+                                    </div>
+                                </a>
+                                <div class="details-section">
+                                    <div>
+                                        <h2>Nissan Civilian</h2>
+                                        <div class="details-grid">
+                                            <div class="details-grid-left">
+                                                <p><span class="font-semibold">Stock no:</span> <b>9067</b></p>
+                                            <p><span class="font-semibold">Gear:</span> <b>Manual</b></p>
+                                            <p><span class="font-semibold">Engine CC:</span> <b>1800</b></p>
+                                            <p><span class="font-semibold">Year:</span> <b>2005/1</b></p>
+                                            </div>
+                                            <div class="details-grid-right">
+                                            <p><span class="font-semibold">Engine model:</span> <b>7K</b></p>
+                                            <p><span class="font-semibold">Seating:</span> <b>8</b></p>
+                                            <p><span class="font-semibold">Model:</span> <b>GK-KM70</b></p>
+                                            <p><span class="font-semibold">Body Type:</span> <b>Light Truck</b></p>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="features-container">
+                                            <span class="feature-badge">ABS</span>
+                                            <span class="feature-badge">Auto Door</span>
+                                            <span class="feature-badge">CD player</span>
+                                            <span class="feature-badge">MP3</span>
+                                            <span class="feature-badge">+2 more</span>
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+                                   <div class="price-inquire-section">
+                                        <div class="price-inquire-iner">
+                                            <p class="main-price price-red">$7,879 <span class="price-fob-text">Price (FOB)</span></p>
+                                            <p class="description-text">Inspection & Insurance Final Country</p>
+                                        </div>
+                                        <p class="final-price-text">Final Price <span class="price-red">-</span></p>
+                                        <div class="inquire-button-container">
+                                            <a href="details.html" class="inquire-button">Inquire</a>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="car-card card-shadow">
+                                <a href="details.html" class="image-section">
+                                    <img src="assets/card-img.jpg" alt="Nissan Civilian" />
+                                    <div class="top-right-buttons">
+                                        <button class="image-action-btn">MP3 interface</button>
+                                        <button class="image-action-btn">ABS</button>
+                                    </div>
+                                </a>
+                                <div class="details-section">
+                                    <div>
+                                        <h2>Nissan Civilian</h2>
+                                        <div class="details-grid">
+                                            <div class="details-grid-left">
+                                                <p><span class="font-semibold">Stock no:</span> <b>9067</b></p>
+                                            <p><span class="font-semibold">Gear:</span> <b>Manual</b></p>
+                                            <p><span class="font-semibold">Engine CC:</span> <b>1800</b></p>
+                                            <p><span class="font-semibold">Year:</span> <b>2005/1</b></p>
+                                            </div>
+                                            <div class="details-grid-right">
+                                            <p><span class="font-semibold">Engine model:</span> <b>7K</b></p>
+                                            <p><span class="font-semibold">Seating:</span> <b>8</b></p>
+                                            <p><span class="font-semibold">Model:</span> <b>GK-KM70</b></p>
+                                            <p><span class="font-semibold">Body Type:</span> <b>Light Truck</b></p>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="features-container">
+                                            <span class="feature-badge">ABS</span>
+                                            <span class="feature-badge">Auto Door</span>
+                                            <span class="feature-badge">CD player</span>
+                                            <span class="feature-badge">MP3</span>
+                                            <span class="feature-badge">+2 more</span>
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+                                   <div class="price-inquire-section">
+                                        <div class="price-inquire-iner">
+                                            <p class="main-price price-red">$7,879 <span class="price-fob-text">Price (FOB)</span></p>
+                                            <p class="description-text">Inspection & Insurance Final Country</p>
+                                        </div>
+                                        <p class="final-price-text">Final Price <span class="price-red">-</span></p>
+                                        <div class="inquire-button-container">
+                                            <a href="details.html" class="inquire-button">Inquire</a>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="car-card card-shadow">
+                                <a href="details.html" class="image-section">
+                                    <img src="assets/card-img.jpg" alt="Nissan Civilian" />
+                                    <div class="top-right-buttons">
+                                        <button class="image-action-btn">MP3 interface</button>
+                                        <button class="image-action-btn">ABS</button>
+                                    </div>
+                                </a>
+                                <div class="details-section">
+                                    <div>
+                                        <h2>Nissan Civilian</h2>
+                                        <div class="details-grid">
+                                            <div class="details-grid-left">
+                                                <p><span class="font-semibold">Stock no:</span> <b>9067</b></p>
+                                            <p><span class="font-semibold">Gear:</span> <b>Manual</b></p>
+                                            <p><span class="font-semibold">Engine CC:</span> <b>1800</b></p>
+                                            <p><span class="font-semibold">Year:</span> <b>2005/1</b></p>
+                                            </div>
+                                            <div class="details-grid-right">
+                                            <p><span class="font-semibold">Engine model:</span> <b>7K</b></p>
+                                            <p><span class="font-semibold">Seating:</span> <b>8</b></p>
+                                            <p><span class="font-semibold">Model:</span> <b>GK-KM70</b></p>
+                                            <p><span class="font-semibold">Body Type:</span> <b>Light Truck</b></p>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="features-container">
+                                            <span class="feature-badge">ABS</span>
+                                            <span class="feature-badge">Auto Door</span>
+                                            <span class="feature-badge">CD player</span>
+                                            <span class="feature-badge">MP3</span>
+                                            <span class="feature-badge">+2 more</span>
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+                                   <div class="price-inquire-section">
+                                        <div class="price-inquire-iner">
+                                            <p class="main-price price-red">$7,879 <span class="price-fob-text">Price (FOB)</span></p>
+                                            <p class="description-text">Inspection & Insurance Final Country</p>
+                                        </div>
+                                        <p class="final-price-text">Final Price <span class="price-red">-</span></p>
+                                        <div class="inquire-button-container">
+                                            <a href="details.html" class="inquire-button">Inquire</a>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="car-card card-shadow">
+                                <a href="details.html" class="image-section">
+                                    <img src="assets/card-img.jpg" alt="Nissan Civilian" />
+                                    <div class="top-right-buttons">
+                                        <button class="image-action-btn">MP3 interface</button>
+                                        <button class="image-action-btn">ABS</button>
+                                    </div>
+                                </a>
+                                <div class="details-section">
+                                    <div>
+                                        <h2>Nissan Civilian</h2>
+                                        <div class="details-grid">
+                                            <div class="details-grid-left">
+                                                <p><span class="font-semibold">Stock no:</span> <b>9067</b></p>
+                                            <p><span class="font-semibold">Gear:</span> <b>Manual</b></p>
+                                            <p><span class="font-semibold">Engine CC:</span> <b>1800</b></p>
+                                            <p><span class="font-semibold">Year:</span> <b>2005/1</b></p>
+                                            </div>
+                                            <div class="details-grid-right">
+                                            <p><span class="font-semibold">Engine model:</span> <b>7K</b></p>
+                                            <p><span class="font-semibold">Seating:</span> <b>8</b></p>
+                                            <p><span class="font-semibold">Model:</span> <b>GK-KM70</b></p>
+                                            <p><span class="font-semibold">Body Type:</span> <b>Light Truck</b></p>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="features-container">
+                                            <span class="feature-badge">ABS</span>
+                                            <span class="feature-badge">Auto Door</span>
+                                            <span class="feature-badge">CD player</span>
+                                            <span class="feature-badge">MP3</span>
+                                            <span class="feature-badge">+2 more</span>
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+                                   <div class="price-inquire-section">
+                                        <div class="price-inquire-iner">
+                                            <p class="main-price price-red">$7,879 <span class="price-fob-text">Price (FOB)</span></p>
+                                            <p class="description-text">Inspection & Insurance Final Country</p>
+                                        </div>
+                                        <p class="final-price-text">Final Price <span class="price-red">-</span></p>
+                                        <div class="inquire-button-container">
+                                            <a href="details.html" class="inquire-button">Inquire</a>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="car-card card-shadow">
+                                <a href="details.html" class="image-section">
+                                    <img src="assets/card-img.jpg" alt="Nissan Civilian" />
+                                    <div class="top-right-buttons">
+                                        <button class="image-action-btn">MP3 interface</button>
+                                        <button class="image-action-btn">ABS</button>
+                                    </div>
+                                </a>
+                                <div class="details-section">
+                                    <div>
+                                        <h2>Nissan Civilian</h2>
+                                        <div class="details-grid">
+                                            <div class="details-grid-left">
+                                                <p><span class="font-semibold">Stock no:</span> <b>9067</b></p>
+                                            <p><span class="font-semibold">Gear:</span> <b>Manual</b></p>
+                                            <p><span class="font-semibold">Engine CC:</span> <b>1800</b></p>
+                                            <p><span class="font-semibold">Year:</span> <b>2005/1</b></p>
+                                            </div>
+                                            <div class="details-grid-right">
+                                            <p><span class="font-semibold">Engine model:</span> <b>7K</b></p>
+                                            <p><span class="font-semibold">Seating:</span> <b>8</b></p>
+                                            <p><span class="font-semibold">Model:</span> <b>GK-KM70</b></p>
+                                            <p><span class="font-semibold">Body Type:</span> <b>Light Truck</b></p>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="features-container">
+                                            <span class="feature-badge">ABS</span>
+                                            <span class="feature-badge">Auto Door</span>
+                                            <span class="feature-badge">CD player</span>
+                                            <span class="feature-badge">MP3</span>
+                                            <span class="feature-badge">+2 more</span>
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+                                   <div class="price-inquire-section">
+                                        <div class="price-inquire-iner">
+                                            <p class="main-price price-red">$7,879 <span class="price-fob-text">Price (FOB)</span></p>
+                                            <p class="description-text">Inspection & Insurance Final Country</p>
+                                        </div>
+                                        <p class="final-price-text">Final Price <span class="price-red">-</span></p>
+                                        <div class="inquire-button-container">
+                                            <a href="details.html" class="inquire-button">Inquire</a>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="car-card card-shadow">
+                                <a href="details.html" class="image-section">
+                                    <img src="assets/card-img.jpg" alt="Nissan Civilian" />
+                                    <div class="top-right-buttons">
+                                        <button class="image-action-btn">MP3 interface</button>
+                                        <button class="image-action-btn">ABS</button>
+                                    </div>
+                                </a>
+                                <div class="details-section">
+                                    <div>
+                                        <h2>Nissan Civilian</h2>
+                                        <div class="details-grid">
+                                            <div class="details-grid-left">
+                                                <p><span class="font-semibold">Stock no:</span> <b>9067</b></p>
+                                            <p><span class="font-semibold">Gear:</span> <b>Manual</b></p>
+                                            <p><span class="font-semibold">Engine CC:</span> <b>1800</b></p>
+                                            <p><span class="font-semibold">Year:</span> <b>2005/1</b></p>
+                                            </div>
+                                            <div class="details-grid-right">
+                                            <p><span class="font-semibold">Engine model:</span> <b>7K</b></p>
+                                            <p><span class="font-semibold">Seating:</span> <b>8</b></p>
+                                            <p><span class="font-semibold">Model:</span> <b>GK-KM70</b></p>
+                                            <p><span class="font-semibold">Body Type:</span> <b>Light Truck</b></p>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="features-container">
+                                            <span class="feature-badge">ABS</span>
+                                            <span class="feature-badge">Auto Door</span>
+                                            <span class="feature-badge">CD player</span>
+                                            <span class="feature-badge">MP3</span>
+                                            <span class="feature-badge">+2 more</span>
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+                                   <div class="price-inquire-section">
+                                        <div class="price-inquire-iner">
+                                            <p class="main-price price-red">$7,879 <span class="price-fob-text">Price (FOB)</span></p>
+                                            <p class="description-text">Inspection & Insurance Final Country</p>
+                                        </div>
+                                        <p class="final-price-text">Final Price <span class="price-red">-</span></p>
+                                        <div class="inquire-button-container">
+                                            <a href="details.html" class="inquire-button">Inquire</a>
+                                        </div>
+                                    </div>
+                            </div>
+                           <div class="car-card card-shadow">
+                                <a href="details.html" class="image-section">
+                                    <img src="assets/card-img.jpg" alt="Nissan Civilian" />
+                                    <div class="top-right-buttons">
+                                        <button class="image-action-btn">MP3 interface</button>
+                                        <button class="image-action-btn">ABS</button>
+                                    </div>
+                                </a>
+                                <div class="details-section">
+                                    <div>
+                                        <h2>Nissan Civilian</h2>
+                                        <div class="details-grid">
+                                            <div class="details-grid-left">
+                                                <p><span class="font-semibold">Stock no:</span> <b>9067</b></p>
+                                            <p><span class="font-semibold">Gear:</span> <b>Manual</b></p>
+                                            <p><span class="font-semibold">Engine CC:</span> <b>1800</b></p>
+                                            <p><span class="font-semibold">Year:</span> <b>2005/1</b></p>
+                                            </div>
+                                            <div class="details-grid-right">
+                                            <p><span class="font-semibold">Engine model:</span> <b>7K</b></p>
+                                            <p><span class="font-semibold">Seating:</span> <b>8</b></p>
+                                            <p><span class="font-semibold">Model:</span> <b>GK-KM70</b></p>
+                                            <p><span class="font-semibold">Body Type:</span> <b>Light Truck</b></p>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="features-container">
+                                            <span class="feature-badge">ABS</span>
+                                            <span class="feature-badge">Auto Door</span>
+                                            <span class="feature-badge">CD player</span>
+                                            <span class="feature-badge">MP3</span>
+                                            <span class="feature-badge">+2 more</span>
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+                                   <div class="price-inquire-section">
+                                        <div class="price-inquire-iner">
+                                            <p class="main-price price-red">$7,879 <span class="price-fob-text">Price (FOB)</span></p>
+                                            <p class="description-text">Inspection & Insurance Final Country</p>
+                                        </div>
+                                        <p class="final-price-text">Final Price <span class="price-red">-</span></p>
+                                        <div class="inquire-button-container">
+                                            <a href="details.html" class="inquire-button">Inquire</a>
+                                        </div>
+                                    </div>
+                            </div>
+                            
+                        </div>
+
                         <a href="#" class="view-more-opt">View More</a>
                     </div>
                 </div>
