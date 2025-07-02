@@ -90,7 +90,7 @@ function activateDropdown(selector, useCustom) {
 }
 
 $(document).ready(function () {
-    activateDropdown("#salaamSelect", true);
+    activateDropdown("#salaamSelect", false);
 
     activateDropdown("#makeSelect", false);
     activateDropdown("#modelSelect", false);

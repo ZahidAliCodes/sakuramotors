@@ -25,13 +25,13 @@ body {
 .vs-select-wrapper {
     width: 254px;
 }
-.salaam-opt .select2-container--default .select2-search--dropdown .select2-search__field {
+/* .salaam-opt .select2-container--default .select2-search--dropdown .select2-search__field {
     display: none;
 }
 .salaam-opt .select2-dropdown--above,
 .salaam-opt .select2-container--open .select2-dropdown--below {
     width: 376px !important;
-}
+} */
 .select2-results__option {
     padding: 0;
 }
@@ -132,19 +132,19 @@ body {
     line-height: 20px;
     color: var(--text-gray);
 }
-.salaam-opt .select2-container--default .select2-results__option--selected {
+/* .salaam-opt .select2-container--default .select2-results__option--selected {
     background-color: #e8f3e0 !important;
-}
+} */
 .inspection input {
     display: none;
 }
 
-.salaam-opt .select2-results__option--selected .checkbox {
+/* .salaam-opt .select2-results__option--selected .checkbox {
     border-color: transparent;
 }
 .salaam-opt .select2-selection--single {
     height: auto;
-}
+} */
 .stock-right {
     width: 844px;
     flex-direction: column;
@@ -882,10 +882,10 @@ body {
   .details-grid-right {
         display: none;
     }
-      .salaam-opt .select2-container--open .select2-dropdown{
+      /* .salaam-opt .select2-container--open .select2-dropdown{
         left: -210px !important;
         width: 180% !important;
-    }
+    } */
     .vs-select-wrapper,
     .filters .vs-select-wrapper,
     .year-range {
@@ -910,7 +910,7 @@ body {
     }
     
 }
-@media (max-width: 440px){
+/* @media (max-width: 440px){
  .salaam-opt .select2-container--open .select2-dropdown{
         left: -162px !important;
         width: 180% !important;
@@ -921,7 +921,7 @@ body {
         left: -140px !important;
         width: 180% !important;
     }
-}
+} */
 @media (max-width: 370px) {
     .year-range {
         width: 64%;
@@ -951,11 +951,11 @@ body {
 .item-count-main .vs-select-wrapper{
     width: 155px;
 }
-.salaam-opt .select2-container--open .select2-dropdown{
+/* .salaam-opt .select2-container--open .select2-dropdown{
         left: -120px !important;
         width: 180% !important;
     }
         .vs-search {
         width: 77%;
-    }
+    } */
 }
