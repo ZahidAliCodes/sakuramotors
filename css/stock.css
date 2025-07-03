@@ -293,6 +293,13 @@ body {
     color: var(--text-color);
     transition: 0.2s;
 }
+.search-type ul li a{
+    height: 56px;
+    
+}
+.search-maker ul li a{
+    height: 50px;
+}
 .search-type li img {
     width: 75px;
     object-fit: contain;
