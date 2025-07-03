@@ -275,3 +275,8 @@ window.onload = () => {
     calculateItemsPerPage();
     updatePagination();
 };
+
+   function reserveAndGo() {
+    localStorage.setItem('showOfferBox', 'true');
+    window.location.href = 'details.html'; // Replace with your actual Stock page URL
+  }

@@ -207,6 +207,10 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="offer-box offer-box-1">
+                            <p>Under offer until:</p>
+                            <div class="countdown">00<span class="unit">h</span> 00<span class="unit">m</span> 00<span class="unit">s</span></div>
+                        </div>
 
                         <div class="box">
                             <h2 class="box-title">
@@ -276,11 +280,232 @@
                             <a href="#">Get a price quote now</a>
                             <button class="btn-share" onclick="copyLink()"><i class="fa-regular fa-share-nodes"></i> Share</button>
                         </div>
+                        <div class="offer-box offer-box-2">
+                            <p>Under offer until:</p>
+                            <div class="countdown">00<span class="unit">h</span> 00<span class="unit">m</span> 00<span class="unit">s</span></div>
+                        </div>
+
                         <div class="box">
                             <h2>Price calculator</h2>
+                            <form class="vs-search-controls">
+                                <div class="vs-filter">
+                                    <div class="vs-filter-input">
+                                        <div class="stock-flt-head">
+                                            <h3>Select country</h3>
+                                            <div class="vs-select-wrapper inspection">
+                                                <select id="makeSelect" class="vs-select">
+                                                    <option value="">Please select</option>
+                                                    <option value="253">Zambia</option>
+                                                    <option value="223">Tanzania</option>
+                                                    <option value="238">Uganda</option>
+                                                    <option value="55">D.R Congo</option>
+                                                    <option value="254">Zimbabwe</option>
+                                                    <option value="153">Mozambique</option>
+                                                    <option value="135">Malawi</option>
+                                                    <option value="214">Sudan</option>
+                                                    <option value="118">Kenya</option>
+                                                    <option value="30">Botswana</option>
+                                                    <option value="37">Burundi</option>
+                                                    <option value="2">Åland Islands</option>
+                                                    <option value="3">Albania</option>
+                                                    <option value="4">Algeria</option>
+                                                    <option value="5">American Samoa</option>
+                                                    <option value="6">Andorra</option>
+                                                    <option value="7">Angola</option>
+                                                    <option value="8">Anguilla</option>
+                                                    <option value="9">Antarctica</option>
+                                                    <option value="10">Antigua &amp; Barbuda</option>
+                                                    <option value="11">Argentina</option>
+                                                    <option value="12">Armenia</option>
+                                                    <option value="13">Aruba</option>
+                                                    <option value="14">Ascension Island</option>
+                                                    <option value="15">Australia</option>
+                                                    <option value="16">Austria</option>
+                                                    <option value="17">Azerbaijan</option>
+                                                    <option value="18">Bahamas</option>
+                                                    <option value="19">Bahrain</option>
+                                                    <option value="20">Bangladesh</option>
+                                                    <option value="21">Barbados</option>
+                                                    <option value="22">Belarus</option>
+                                                    <option value="23">Belgium</option>
+                                                    <option value="24">Belize</option>
+                                                    <option value="25">Benin</option>
+                                                    <option value="26">Bermuda</option>
+                                                    <option value="27">Bhutan</option>
+                                                    <option value="28">Bolivia</option>
+                                                    <option value="29">Bosnia &amp; Herzegovina</option>
+                                                    <option value="31">Brazil</option>
+                                                    <option value="32">British Indian Ocean Territory</option>
+                                                    <option value="33">British Virgin Islands</option>
+                                                    <option value="34">Brunei</option>
+                                                    <option value="35">Bulgaria</option>
+                                                    <option value="36">Burkina Faso</option>
+                                                    <option value="38">Cambodia</option>
+                                                    <option value="39">Cameroon</option>
+                                                    <option value="40">Canada</option>
+                                                    <option value="41">Canary Islands</option>
+                                                    <option value="42">Cape Verde</option>
+                                                    <option value="43">Caribbean Netherlands</option>
+                                                    <option value="44">Cayman Islands</option>
+                                                    <option value="45">Central African Republic</option>
+                                                    <option value="46">Ceuta &amp; Melilla</option>
+                                                    <option value="47">Chad</option>
+                                                    <option value="48">Chile</option>
+                                                    <option value="49">China</option>
+                                                    <!-- Add remaining options here up to -->
+                                                    <option value="252">Yemen</option>
+                                                </select>
+                                                <i class="fas fa-chevron-down vs-chevron"></i>
+                                            </div>
+                                        </div>
+                                        <div class="stock-flt-head salaam-opt">
+                                            <h3>Select port</h3>
+                                            <div class="vs-select-wrapper inspection">
+                                                <select id="salaamSelect" class="vs-select">
+                                                    <option value="">Any</option>
+                                                    <option value="2" data-price="$17,879" data-subtitle="Cost & Insurance & Freight Fees">Dar es Salaam (C&F)</option>
+                                                    <option value="3" data-price="$17,879" data-subtitle="Cost & Insurance & Freight Fees">Dar es Salaam (C&F)</option>
+                                                    <option value="4" data-price="$17,879" data-subtitle="Cost & Insurance & Freight Fees">Dar es Salaam (C&F)</option>
+                                                </select>
+
+                                                <i class="fas fa-chevron-down vs-chevron"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="toggle-container">
+                                            <div class="toggle-row">
+                                                <span class="label">Inspection</span>
+                                                <div class="button-group">
+                                                    <input type="radio" id="inspectionNo" name="inspection" value="no" checked />
+                                                    <label for="inspectionNo" class="toggle-button">No</label>
+                                                    <input type="radio" id="inspectionYes" name="inspection" value="yes" />
+                                                    <label for="inspectionYes" class="toggle-button yes-button">Yes</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="toggle-row">
+                                                <span class="label">Insurance</span>
+                                                <div class="button-group">
+                                                    <input type="radio" id="insuranceNo" name="insurance" value="no" checked />
+                                                    <label for="insuranceNo" class="toggle-button">No</label>
+                                                    <input type="radio" id="insuranceYes" name="insurance" value="yes" />
+                                                    <label for="insuranceYes" class="toggle-button yes-button">Yes</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="vs-search-btn">Calculate Final Price</button>
+                            </form>
+                            <div class="stock-price-info">
+                                <h1>Final Price</h1>
+                                <h1>$7,879</h1>
+                            </div>
+                            <button class="vs-search-btn" type="button"><i class="fa-regular fa-magnifying-glass"></i>Next</button>
                         </div>
                         <div class="box">
-                            <h2>Get Inquiry</h2>
+                            <h2>
+                                Get Inquiry
+                                <a href="https://wa.me/81298683668" target="_blank">
+                                    <i class="fa-regular c-t-a fa-phone"></i>
+                                    <span>+81-29-868-3668</span>
+                                </a>
+                            </h2>
+
+                            <form id="contactForm">
+                                <div class="form-group">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" id="name" placeholder="John Doe" />
+                                </div>
+                                <div class="stock-flt-head">
+                                    <h3>Select country</h3>
+                                    <div class="vs-select-wrapper inspection">
+                                        <select id="makeSelectCountry" class="vs-select">
+                                            <option value="">Zambia</option>
+                                            <option value="253">Zambia</option>
+                                            <option value="223">Tanzania</option>
+                                            <option value="238">Uganda</option>
+                                            <option value="55">D.R Congo</option>
+                                            <option value="254">Zimbabwe</option>
+                                            <option value="153">Mozambique</option>
+                                            <option value="135">Malawi</option>
+                                            <option value="214">Sudan</option>
+                                            <option value="118">Kenya</option>
+                                            <option value="30">Botswana</option>
+                                            <option value="37">Burundi</option>
+                                            <option value="2">Åland Islands</option>
+                                            <option value="3">Albania</option>
+                                            <option value="4">Algeria</option>
+                                            <option value="5">American Samoa</option>
+                                            <option value="6">Andorra</option>
+                                            <option value="7">Angola</option>
+                                            <option value="8">Anguilla</option>
+                                            <option value="9">Antarctica</option>
+                                            <option value="10">Antigua &amp; Barbuda</option>
+                                            <option value="11">Argentina</option>
+                                            <option value="12">Armenia</option>
+                                            <option value="13">Aruba</option>
+                                            <option value="14">Ascension Island</option>
+                                            <option value="15">Australia</option>
+                                            <option value="16">Austria</option>
+                                            <option value="17">Azerbaijan</option>
+                                            <option value="18">Bahamas</option>
+                                            <option value="19">Bahrain</option>
+                                            <option value="20">Bangladesh</option>
+                                            <option value="21">Barbados</option>
+                                            <option value="22">Belarus</option>
+                                            <option value="23">Belgium</option>
+                                            <option value="24">Belize</option>
+                                            <option value="25">Benin</option>
+                                            <option value="26">Bermuda</option>
+                                            <option value="27">Bhutan</option>
+                                            <option value="28">Bolivia</option>
+                                            <option value="29">Bosnia &amp; Herzegovina</option>
+                                            <option value="31">Brazil</option>
+                                            <option value="32">British Indian Ocean Territory</option>
+                                            <option value="33">British Virgin Islands</option>
+                                            <option value="34">Brunei</option>
+                                            <option value="35">Bulgaria</option>
+                                            <option value="36">Burkina Faso</option>
+                                            <option value="38">Cambodia</option>
+                                            <option value="39">Cameroon</option>
+                                            <option value="40">Canada</option>
+                                            <option value="41">Canary Islands</option>
+                                            <option value="42">Cape Verde</option>
+                                            <option value="43">Caribbean Netherlands</option>
+                                            <option value="44">Cayman Islands</option>
+                                            <option value="45">Central African Republic</option>
+                                            <option value="46">Ceuta &amp; Melilla</option>
+                                            <option value="47">Chad</option>
+                                            <option value="48">Chile</option>
+                                            <option value="49">China</option>
+                                            <option value="252">Yemen</option>
+                                        </select>
+                                        <i class="fas fa-chevron-down vs-chevron"></i>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Your Email</label>
+                                    <input type="email" id="email" placeholder="johndoe@gmail.com" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="mobile">Mobile</label>
+                                    <input type="tel" id="mobile" placeholder="+1215626515" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" placeholder="Dar Es Salaam" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" rows="4" placeholder="Enter here your message"></textarea>
+                                </div>
+                                <button class="vs-search-btn" type="submit"><i class="fa-regular fa-magnifying-glass"></i>Get a price quote now</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -290,13 +515,13 @@
             <div class="container">
                 <div class="social-link-main">
                     <a href="#" class="social-link">
-                        <img src="assets/facebook.svg" alt="facebook">
+                        <img src="assets/facebook.svg" alt="facebook" />
                     </a>
                     <a href="#" class="social-link">
-                        <img src="assets/yt.svg" alt="yt">
+                        <img src="assets/yt.svg" alt="yt" />
                     </a>
                     <a href="#" class="social-link">
-                        <img src="assets/insta.svg" alt="insta">
+                        <img src="assets/insta.svg" alt="insta" />
                     </a>
                 </div>
             </div>
