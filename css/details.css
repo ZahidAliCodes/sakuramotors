@@ -960,12 +960,12 @@ body {
 .vs-filter {
     width: 100%;
 }
+ .offer-box-1 {
+        display: none !important;
+    }
 
-.offer-box-1 {
-    display: none !important;
-}
 @media (max-width: 1200px) {
-    .offer-box-1 {
+    .offer-box-1.show {
         display: inline-block !important;
     }
     .offer-box-2 {
@@ -1302,13 +1302,13 @@ gap: 8px ;
 @media (max-width: 375px) {
     #overlayPrevBtn,
     #overlayNextBtn {
-        top: 300px;
+        top: 286px;
     }
 }
 @media (max-width: 361px) {
     #overlayPrevBtn,
     #overlayNextBtn {
-        top: 40%;
+        top: 37%;
     }
 }
 @media (max-width: 346px) {
@@ -1325,5 +1325,10 @@ gap: 8px ;
     #overlayPrevBtn,
     #overlayNextBtn {
         top: 38%;
+    }
+}
+@media (max-width: 322px) {
+    #overlayPrevBtn, #overlayNextBtn {
+        top: 36%;
     }
 }

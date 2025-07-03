@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
     animateWords();
     setInterval(animateWords, 4000 + 2000); // 4s cycle + 2s pause
 
-    function reserveAndGo() {
-    localStorage.setItem('showOfferBox', 'true');
-    window.location.href = 'details.html'; // Replace with your actual Stock page URL
-  }
+   function reserveAndGo() {
+  localStorage.setItem('showOfferBox', 'true');
+  window.location.href = 'details.html';
+}

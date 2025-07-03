@@ -1473,9 +1473,9 @@ input {
     .grid-wrapper {
         margin: 24px 0;
     }
-    .grid-wrapper,
+  
     .search-by {
-        padding: 24px 0;
+        padding:24px 0 80px 0;
     }
 }
 
@@ -1568,12 +1568,15 @@ input {
         width: 100vw 320px;
         transform: rotate(101deg);
     }
-
+ .grid-wrapper,
+    .search-by {
+        padding: 24px 0 80px 0;
+    }
     .vehicle-make-image {
         width: 50%;
     }
     .grid-wrapper {
-        padding: 0 0 30px 0;
+        padding: 0 0 10px 0;
     }
         .heading-arrive {
         margin: 70px 0 20px 0;
