@@ -163,6 +163,13 @@ body {
     flex-direction: column;
     gap: 24px;
 }
+
+.filter-col {
+    display: flex
+;
+    flex-direction: column;
+    gap: 12px;
+}
 .filters .stock-flt-head {
     display: flex;
     justify-content: space-between;
@@ -264,7 +271,11 @@ body {
     background-color: var(--primary-light);
 }
 .search-maker ul,
-.search-type ul,
+.search-type ul{
+     display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 .search-maker,
 .search-type {
     display: flex;
@@ -769,6 +780,7 @@ body {
     }
     .grid-wrapper {
         padding: 0;
+        margin: 16px 0;
     }
     .m-head p {
         width: 90%;
@@ -799,11 +811,14 @@ body {
         border: 1px solid var(--primary-color);
         transition: background-color 0.3s ease, color 0.3s ease;
     }
-
+.filters {
+    gap: 16px;
+}
  
   
     .stock-main {
         flex-direction: column;
+        gap: 24px;
     }
     .sidebar {
         width: 100%;
@@ -832,11 +847,11 @@ body {
         padding: 0;
     }
     #car-listings-container {
-        width: 96%;
+        width: 98%;
         margin: 0 auto;
     }
     .container {
-        width: 96%;
+        width: 90%;
         margin: 0 auto;
         overflow: hidden;
     }
@@ -906,7 +921,7 @@ body {
         width: 64%;
     }
     .details-section h2 {
-        font-size: 14px;
+        font-size: 18px;
     }
     .details-grid p {
         font-size: 12px;
@@ -929,6 +944,17 @@ body {
 }
 .item-count-main .vs-select-wrapper{
     width: 155px;
+}
+@media (max-width: 330px) {
+    .year-range {
+        width: 67%;
+    }
+    .item-count-main{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+        gap: 8px;
+    }
 }
 /* .salaam-opt .select2-container--open .select2-dropdown{
         left: -120px !important;

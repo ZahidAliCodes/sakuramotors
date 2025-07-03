@@ -323,7 +323,7 @@ body {
 }
 .pagination-dots {
     display: flex;
-    gap: 8px;
+    gap: 12px;
     margin-top: 0;
     flex-grow: 1;
     justify-content: center;
@@ -1005,6 +1005,15 @@ body {
     #overlayNextBtn {
         right: 10px;
     }
+    .box h2, .box-title{
+        padding: 0 0 16px 0;
+    }
+    .features-list{
+gap: 8px ;
+    }
+    .features-list{
+        padding: 16px 0 0 0;
+    }
 }
 @media (max-width: 860px) {
     #overlayPrevBtn,
@@ -1134,10 +1143,7 @@ body {
         margin-top: 5px;
         gap: 4px;
     }
-    .dot {
-        width: 5px;
-        height: 5px;
-    }
+  
     .details-list {
         flex-direction: column;
         gap: 0;
@@ -1169,10 +1175,10 @@ body {
         font-size: 16px;
     }
     .features-list li {
-        font-size: 14px;
+        font-size: 16px;
     }
     .social-link-main {
-        margin: 60px 0 48px 0;
+        margin: 24px 0;
     }
     .salaam-opt .select2-container--open .select2-dropdown {
         left: -107px !important;
@@ -1274,10 +1280,7 @@ body {
     .box h2 a {
         font-size: 12px;
     }
-    .box h2,
-    .box-title {
-        font-size: 18px;
-    }
+  
 
     .button-group {
         width: 64%;
